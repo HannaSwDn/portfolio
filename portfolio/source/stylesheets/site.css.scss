@@ -68,8 +68,10 @@ nav {
       font-weight: 300;
       letter-spacing: 5px;
       line-height: 25vh;
+      opacity: 0;
       text-align: center;
       text-transform: uppercase;
+      transition: opacity .5s;
     }
 
     #li-one {
