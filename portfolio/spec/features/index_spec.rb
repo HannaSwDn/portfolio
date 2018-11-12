@@ -8,4 +8,12 @@ describe 'Index Page', type: :feature do
             expect(page).to have_content 'FizzBuzz'
         end
     end
+
+    it 'displays a navigation bar' do
+        visit '/'
+
+        within 'nav' do
+            expect(page).to have_content 'Hanna Linnéa Nyman'
+        end
+    end
 end

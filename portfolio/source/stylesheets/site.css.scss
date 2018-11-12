@@ -1,24 +1,57 @@
-body {
-  background-color: #fbc547;
-  color: #333;
-  font-family: -apple-system, BlinkMacSystemFont, "Avenir Next", "Avenir",
-    "Segoe UI", "Lucida Grande", "Helvetica Neue", "Helvetica", "Fira Sans",
-    "Roboto", "Noto", "Droid Sans", "Cantarell", "Oxygen", "Ubuntu",
-    "Franklin Gothic Medium", "Century Gothic", "Liberation Sans", sans-serif;
-  padding: 18vh 1rem;
-  text-align: center;
+$lightblue: #eef7fa;
+
+@import url('https://fonts.googleapis.com/css?family=Montserrat:300,400');
+
+* {
+  box-sizing: border-box;
+  font-family: Montserrat;
+  margin: 0;
+  padding: 0;
 }
 
-a {
-  color: rgba(#000, 0.7);
+body {
+  background-color: $lightblue;
+  font-size: 10px;
+}
 
-  &:focus,
-  &:hover {
-    color: rgba(#000, 0.6);
+nav {
+  background: white;
+  // add effect so it becomes more transparent as you scroll down
+  font-weight: 300;
+  height: 5rem;
+  left: 0;
+  position: absolute;
+  text-transform: uppercase;
+  top: 0;
+  width: 100vw;
+
+  h1 {
+    float: left;
+    font-size: 30px;
+    font-weight: 300;
+    letter-spacing: 2px;
+    line-height: 5rem;
+    padding-left: 20px;
+  }
+
+  div {
+    align-items: center;
+    cursor: pointer;
+    display: flex;
+    float: right;
+    font-size: 25px;
+    height: 5rem;
+    justify-content: center;
+    width: 200px;
+
+    p {
+      padding-right: 10px;
+    }
+
+    img {
+      width: 30px;
+    }
   }
 }
 
-.middleman-logo {
-  margin-bottom: 1rem;
-  width: 10rem;
-}
+
