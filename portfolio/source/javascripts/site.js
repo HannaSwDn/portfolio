@@ -12,6 +12,10 @@ window.onload = function() {
     menu_btn.addEventListener('click', event => {
         openMenu()
     })
+
+    li_one.addEventListener('click', event => {
+        closeMenu()
+    })
 }
 
 const openMenu = () => {
@@ -20,4 +24,12 @@ const openMenu = () => {
     setTimeout(function(){ li_two.style.opacity = '1' }, 200);
     setTimeout(function(){ li_three.style.opacity = '1' }, 400);
     setTimeout(function(){ li_four.style.opacity = '1' }, 600);
+}
+
+const closeMenu = () => {
+    setTimeout(function(){ li_one.style.opacity = '0' }, 10);
+    setTimeout(function(){ li_two.style.opacity = '0' }, 200);
+    setTimeout(function(){ li_three.style.opacity = '0' }, 400);
+    setTimeout(function(){ li_four.style.opacity = '0' }, 600);
+    setTimeout(function(){ menu.style.display = 'none' }, 810);
 }

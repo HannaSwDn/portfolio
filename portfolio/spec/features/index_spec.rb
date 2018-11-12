@@ -16,4 +16,15 @@ describe 'Index Page', type: :feature do
             expect(page).to have_content 'Hanna Linnéa Nyman'
         end
     end
+
+    describe 'menu' do
+        it 'displays navigation links' do
+            visit '/'
+    
+            within '#menu' do
+                expect(page).to have_content 'home'
+            end
+        end
+    end
 end
+

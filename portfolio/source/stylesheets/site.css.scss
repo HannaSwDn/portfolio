@@ -71,7 +71,11 @@ nav {
       opacity: 0;
       text-align: center;
       text-transform: uppercase;
-      transition: opacity .5s;
+      transition: all .5s;
+    }
+
+    li:hover {
+      letter-spacing: 10px;
     }
 
     #li-one {
