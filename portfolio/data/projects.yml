@@ -3,3 +3,6 @@
 
 - name: FizzBuzz
   description: My first Test driven ruby project
+
+- name: Club Sandwich
+  description: A sandwich shop website I made to practice CSS

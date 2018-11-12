@@ -7,8 +7,9 @@
     %meta{:content => "width=device-width, initial-scale=1, shrink-to-fit=no", name: "viewport"}/
 
     %title= current_page.data.title || "Middleman"
-    = stylesheet_link_tag "stylesheets/site.css.scss"
-    = javascript_include_tag "javascripts/site.js"
+    = stylesheet_link_tag "site"
+    = javascript_include_tag "site"
 
 %body
     = yield
+    = partial "partials/projects"
