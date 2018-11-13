@@ -1,11 +1,13 @@
 $lightblue: #eef7fa;
-$lightpink: #fffbfb;
+$lightpink: #fff6f7;
 
 @import url('https://fonts.googleapis.com/css?family=Montserrat:300,400');
+@import url('https://fonts.googleapis.com/css?family=Oswald');
 
 * {
   box-sizing: border-box;
   font-family: Montserrat;
+  font-weight: 300;
   margin: 0;
   overflow-x: hidden;
   padding: 0;
@@ -15,43 +17,85 @@ body {
   font-size: 10px;
 }
 
-#nav {
-  background: white;
-  // add effect so it becomes more transparent as you scroll down
-  font-weight: 300;
-  height: 5rem;
-  position: fixed;
-  text-transform: uppercase;
-  transition: all .5s;
+.black {
+  background-color: black;
+  color: white;
+  height: 100vh;
   width: 100vw;
 
-  h1 {
-    float: left;
-    font-size: 30px;
-    font-weight: 300;
-    letter-spacing: 2px;
-    line-height: 5rem;
-    padding-left: 20px;
+  .white {
+    background-color: white;
+    float: right;
+    height: 100vh;
+    width: 14rem;
+  }
+}
+
+.header {
+  color: white;
+  font-family: Oswald;
+  font-size: 80px;
+  letter-spacing: 5px;
+  padding-left: 2rem;
+  text-transform: uppercase;
+}
+
+#nav {
+  align-items: center;
+  background-color: white;
+  cursor: pointer;
+  display: flex;
+  height: 12rem;
+  justify-content: center;
+  position: fixed;
+  right: 0;
+  text-transform: uppercase;
+  top: 0;
+  transition: all .5s;
+  width: 14rem;
+
+  p {
+    font-size: 15px;
+    letter-spacing: 4px;
+    padding-right: 6px;
   }
 
-  div {
-    // move this div to the bottom of the screen to make it responsive
-    align-items: center;
+  #hamburger {
     cursor: pointer;
-    display: flex;
     float: right;
-    font-size: 25px;
-    height: 5rem;
-    justify-content: center;
-    width: 200px;
-
-    p {
-      padding-right: 10px;
+  
+    .line {
+      background-color: black;
+      height: 1px;
+      margin-bottom: 7px;
+      margin-top: 7px;
+      transition: all .5s;
+      width: 40px;
     }
 
-    img {
+    #line_one {
+      width: 20px;
+    }
+
+    #line_two {
+      width: 40px;
+    }
+
+    #line_three {
       width: 30px;
     }
+  }
+
+  #hamburger:hover #line_one {
+    width: 40px;
+  }
+
+  #hamburger:hover #line_two {
+    width: 30px;
+  }
+
+  #hamburger:hover #line_three {
+    width: 20px;
   }
 }
 
@@ -67,11 +111,10 @@ body {
     li {
       cursor: pointer;
       font-size: 25px;
-      font-weight: 300;
       letter-spacing: 5px;
-      line-height: 25vh;
+      line-height: 20vh;
       opacity: 0;
-      text-align: center;
+      padding-left: 3rem;
       text-transform: uppercase;
       transition: all .5s;
     }
@@ -81,65 +124,64 @@ body {
     }
 
     #li-one {
-      background-color: rgba(255, 252, 252, .9);
+      background-color: black;
+      color: white;
     }
 
     #li-two {
-      background-color: rgba(248, 252, 252, .9);
+      background-color: white;
     }
 
     #li-three {
-      background-color: rgba(255, 252, 252, .9);
+      background-color: $lightpink;
     }
 
     #li-four {
-      background-color: rgba(251, 252, 252, .9);
+      background-color: black;
+      color: white;
+    }
+
+    #li-five {
+      background-color: white;
     }
   }
 }
 
 /* projects */
 
-#projects {
-  padding-top: 20vh;
-}
-
 .project_box {
-  float: left;
-  height: 80vh;
+  height: 100vh;
   width: 100vw;
 }
 
-.project_info {
-  float: left;
-  height: 80vh;
-  width: 65vw;
-
-  .project_name {
-    line-height: 30vh;
-    text-align: center;
-  }
-}
-
-.project_link {
-  align-items: center;
-  display: flex;
-  float: left;
-  height: 80vh;
-  justify-content: center;
-  width: 35vw;
-}
-
-.project_link button {
-  border: 1px solid black;
-  cursor: pointer;
-  height: 50px;
+.project_name {
+  font-family: Oswald;
+  font-size: 60px;
+  letter-spacing: 3px;
+  padding-left: 2rem;
   text-transform: uppercase;
-  transition: all .25s;
-  width: 200px;
 }
 
-.project_link button:hover {
-  background-color: black;
-  color: white;
+/*
+
+media queries
+
+*/
+
+@media screen and (max-width: 900px) {
+  .black {
+    width: 100vw;
+  }
+
+  .white {
+    display: none;
+  }
+
+  #nav {
+    bottom: 0;
+    height: 5rem;
+    left: 0;
+    top: auto;
+    width: 100vw;
+  }
 }

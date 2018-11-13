@@ -8,6 +8,10 @@ In order to contact the person who made the page<br>
 I would like to see a contact section<br>
 
 As a visitor<br>
+In order to easily contact the person who made the page<br>
+I would like to see an email contact form<br>
+
+As a visitor<br>
 In order to get some basic information about the person<br>
 I would like to see an about me section<br>
 

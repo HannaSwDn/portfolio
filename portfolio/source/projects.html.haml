@@ -2,15 +2,14 @@
 title: Projects
 ---
 
+.black
+    %p.header - projects
+    .white
 = partial 'partials/projects'
                
 .projects
     - data.projects.each do |project|
         .project_box
-            .project_info
-                %h4.project_name= project[:name]
-                %p= project[:description]
-
-            .project_link
-                %button= project[:link]
-    
+            %h4.project_name= project[:name]
+            %p= project[:description]
+            %button= project[:link]
