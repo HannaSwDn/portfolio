@@ -3,6 +3,10 @@ $lightpink: #fffbfb;
 
 @import url('https://fonts.googleapis.com/css?family=Montserrat:300,400');
 
+#aboutheader {
+  padding-top: 20vh;
+}
+
 * {
   box-sizing: border-box;
   font-family: Montserrat;
@@ -94,4 +98,8 @@ nav {
       background-color: rgba(251, 252, 252, .9);
     }
   }
+}
+
+#divis {
+  padding-top: 20vh;
 }

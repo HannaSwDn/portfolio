@@ -1,6 +1,6 @@
-// DOM variables
+// declaring DOM variables
 let menu_btn, menu, li_one, li_two, li_three, li_four
-// setting DOM variables when the browser has been loaded
+// setting DOM variables and event listeners when the browser has been loaded
 window.onload = function() {
     menu_btn = document.getElementById('menu_btn')
     menu = document.querySelector('#menu')
@@ -15,6 +15,22 @@ window.onload = function() {
 
     li_one.addEventListener('click', event => {
         closeMenu()
+        setTimeout(function() { window.open('index.html', '_self'); }, 820);
+    })
+
+    li_two.addEventListener('click', event => {
+        closeMenu()
+        setTimeout(function() { window.open('about.html', '_blank'); }, 820);
+    })
+
+    li_three.addEventListener('click', event => {
+        closeMenu()
+        setTimeout(function() { window.open('projects.html', '_blank'); }, 820);
+    })
+
+    li_four.addEventListener('click', event => {
+        closeMenu()
+        setTimeout(function() { window.open('contact.html', '_blank'); }, 820);
     })
 }
 
