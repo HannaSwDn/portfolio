@@ -3,14 +3,11 @@ $lightpink: #fffbfb;
 
 @import url('https://fonts.googleapis.com/css?family=Montserrat:300,400');
 
-#aboutheader {
-  padding-top: 20vh;
-}
-
 * {
   box-sizing: border-box;
   font-family: Montserrat;
   margin: 0;
+  overflow-x: hidden;
   padding: 0;
 }
 
@@ -18,13 +15,14 @@ body {
   font-size: 10px;
 }
 
-nav {
+#nav {
   background: white;
   // add effect so it becomes more transparent as you scroll down
   font-weight: 300;
   height: 5rem;
   position: fixed;
   text-transform: uppercase;
+  transition: all .5s;
   width: 100vw;
 
   h1 {
@@ -100,6 +98,48 @@ nav {
   }
 }
 
-#divis {
+/* projects */
+
+#projects {
   padding-top: 20vh;
+}
+
+.project_box {
+  float: left;
+  height: 80vh;
+  width: 100vw;
+}
+
+.project_info {
+  float: left;
+  height: 80vh;
+  width: 65vw;
+
+  .project_name {
+    line-height: 30vh;
+    text-align: center;
+  }
+}
+
+.project_link {
+  align-items: center;
+  display: flex;
+  float: left;
+  height: 80vh;
+  justify-content: center;
+  width: 35vw;
+}
+
+.project_link button {
+  border: 1px solid black;
+  cursor: pointer;
+  height: 50px;
+  text-transform: uppercase;
+  transition: all .25s;
+  width: 200px;
+}
+
+.project_link button:hover {
+  background-color: black;
+  color: white;
 }
