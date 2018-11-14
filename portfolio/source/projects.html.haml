@@ -3,13 +3,29 @@ title: Projects
 ---
 
 .black
-    %p.header - projects
     .white
-= partial 'partials/projects'
-               
+
+#projects_header projects
+
+// = partial 'partials/projects'
+
 .projects
     - data.projects.each do |project|
-        .project_box
-            %h4.project_name= project[:name]
-            %p= project[:description]
-            %button= project[:link]
+        - if project[:id] % 2 == 0
+            .project_box
+                .project_box_black
+                    //%button= project[:link]
+                .project_box_white
+                    //%h4.project_name= project[:name]
+                    //%p.project_description= project[:description]
+                    //%p What I used to build this:
+                    //%p= project[:techniques]
+        - elsif project[:id] % 2 != 0
+            .project_box
+                .project_box_black.right
+                    //%button= project[:link]
+                .project_box_white.right
+                    //%h4.project_name= project[:name]
+                    //%p.project_description= project[:description]
+                    //%p What I used to build this:
+                    //%p= project[:techniques]

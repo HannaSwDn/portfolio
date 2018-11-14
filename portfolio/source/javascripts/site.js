@@ -1,7 +1,9 @@
 // declaring DOM variables
-let menu_btn, menu, li_one, li_two, li_three, li_four, nav
+let menu_btn, menu, li_one, li_two, li_three, li_four, nav, projects_header
 // setting DOM variables and event listeners when the browser has been loaded
 window.onload = function() {
+    projects_header = document.querySelector('#projects_header')
+    about_header = document.querySelector('#about_header')
     nav = document.querySelector('#nav')
     menu = document.querySelector('#menu')
     li_one = document.querySelector('#li-one')
@@ -41,6 +43,13 @@ window.onload = function() {
     document.addEventListener('scroll', event => {
         let offset = window.pageYOffset;
         menu.style.top = offset + 'px'
+
+        let offset_top = projects_header.offsetTop
+        if (offset + 500 >= offset_top) {
+            projects_header.style.width = '100%'
+        } else {
+            projects_header.style.width = '0%'
+        }
     })
 }
 

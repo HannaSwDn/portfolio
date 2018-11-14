@@ -12,8 +12,8 @@ describe 'Index Page', type: :feature do
     it 'displays a navigation bar' do
         visit '/'
 
-        within 'nav' do
-            expect(page).to have_content 'Hanna Linnéa Nyman'
+        within '#nav' do
+            expect(page).to have_content 'menu'
         end
     end
 
