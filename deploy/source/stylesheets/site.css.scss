@@ -1,0 +1,266 @@
+$lightblue: #eef7fa;
+$lightpink: #fff6f7;
+
+@import url('https://fonts.googleapis.com/css?family=Montserrat:300,400,600');
+@import url('https://fonts.googleapis.com/css?family=Oswald');
+
+* {
+  box-sizing: border-box;
+  font-family: Montserrat;
+  font-weight: 300;
+  margin: 0;
+  overflow-x: hidden;
+  padding: 0;
+}
+
+body {
+  font-size: 10px;
+}
+
+.home {
+  animation: width .5s;
+}
+
+.black {
+  background-color: black;
+  color: white;
+  height: 100vh;
+  width: 100vw;
+
+  .white {
+    background-color: white;
+    float: right;
+    height: 100vh;
+    width: 15vw;
+  }
+}
+
+/* landing page / homepage */
+
+.top, .bottom {
+  height: 12rem;
+  width: 100vw;
+}
+
+.top_one {
+  background-color: black;
+  width: 85vw;
+}
+
+.middle {
+  background-color: white;
+  height: calc(100vh - 24rem);
+  text-align: center;
+  text-transform: uppercase;
+
+  p {
+    font-size: 30px;
+    font-weight: 600;
+    letter-spacing: 10px;
+  }
+
+  p:first-child {
+    padding-top: 10rem;
+  }
+}
+
+hr {
+  background-color: black;
+  border: none;
+  height: 2px;
+  margin: auto;
+  margin-bottom: 15px;
+  margin-top: 15px;
+  width: 50px;
+}
+
+#name {
+  color: black;
+  font-size: 20px;
+  font-weight: 600;
+  letter-spacing: 10px;
+}
+
+.bottom_one {
+  background-color: black;
+  float: left;
+  height: 12rem;
+  width: 15vw;
+}
+
+.bottom_two {
+  background-color: $lightpink;
+  float: left;
+  height: 12rem;
+  width: 85vw;
+}
+
+/* about me */
+
+/* navigation */
+
+#nav {
+  align-items: center;
+  background-color: rgba(255, 255, 255, .95);
+  cursor: pointer;
+  display: flex;
+  height: 12rem;
+  justify-content: center;
+  position: fixed;
+  right: 0;
+  text-transform: uppercase;
+  top: 0;
+  width: 15vw;
+
+  p {
+    font-size: 15px;
+    letter-spacing: 4px;
+    padding-right: 6px;
+  }
+
+  #hamburger {
+    cursor: pointer;
+    float: right;
+  
+    .line {
+      background-color: black;
+      height: 1px;
+      margin-bottom: 7px;
+      margin-top: 7px;
+      transition: all .5s;
+      width: 40px;
+    }
+
+    #line_one {
+      width: 20px;
+    }
+
+    #line_two {
+      width: 40px;
+    }
+
+    #line_three {
+      width: 30px;
+    }
+  }
+
+  #hamburger:hover #line_one {
+    width: 40px;
+  }
+
+  #hamburger:hover #line_two {
+    width: 30px;
+  }
+
+  #hamburger:hover #line_three {
+    width: 20px;
+  }
+}
+
+#menu {
+  display: none;
+  height: 100vh;
+  position: absolute;
+  width: 100vw;
+
+  ul {
+    list-style-type: none;
+
+    li {
+      background-color: rgba(0, 0, 0, .9);
+      color: white;
+      cursor: pointer;
+      font-size: 25px;
+      letter-spacing: 5px;
+      line-height: 20vh;
+      opacity: 0;
+      padding-left: 3rem;
+      text-transform: uppercase;
+      transition: all .5s;
+    }
+
+    li:hover {
+      letter-spacing: 10px;
+    }
+  }
+}
+
+/* projects */
+
+#projects_header, #about_header {
+  background-color: $lightblue;
+  font-family: Oswald;
+  font-size: calc(7vw + 10px);
+  letter-spacing: 8px;
+  line-height: 12rem;
+  text-align: center;
+  text-transform: uppercase;
+  transition: width .5s;
+  width: 0vw;
+}
+
+.project_box {
+  height: 100vh;
+  width: 100vw;
+
+  .project_box_white {
+    background-color: red;
+    height: 14rem;
+    width: 85vw;
+  }
+
+  .project_box_black {
+    background-color: black;
+    display: block;
+    height: calc(100vh - 14rem);
+    width: 15vw;
+  }
+
+  .right {
+    float: right;
+  }
+}
+
+/*
+
+media queries
+
+*/
+
+@media screen and (max-width: 900px) {
+  .black, .top_one {
+    width: 100vw;
+  }
+
+  .white {
+    display: none;
+  }
+
+  #nav {
+    bottom: 0;
+    height: 5rem;
+    left: 0;
+    top: auto;
+    width: 100vw;
+  }
+
+  .top_two {
+    width: 0vw;
+  }
+}
+
+/*
+
+keyframes
+
+*/
+
+@keyframes width {
+  0% {
+    width: 0%;
+  }
+
+  100% {
+    width: 100%;
+  }
+}
