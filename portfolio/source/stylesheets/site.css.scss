@@ -1,6 +1,14 @@
 $lightblue: #eef7fa;
 $lightpink: #fff6f7;
 
+.lightblue {
+  background-color: $lightblue;
+}
+
+.lightpink {
+  background-color: $lightpink;
+}
+
 @import url('https://fonts.googleapis.com/css?family=Montserrat:300,400,600');
 @import url('https://fonts.googleapis.com/css?family=Oswald');
 
@@ -19,20 +27,6 @@ body {
 
 .home {
   animation: width .5s;
-}
-
-.black {
-  background-color: black;
-  color: white;
-  height: 100vh;
-  width: 100vw;
-
-  .white {
-    background-color: white;
-    float: right;
-    height: 100vh;
-    width: 15vw;
-  }
 }
 
 /* landing page / homepage */
@@ -101,7 +95,7 @@ hr {
 
 #nav {
   align-items: center;
-  background-color: rgba(255, 255, 255, .95);
+  background-color: rgba(255, 255, 255, .9);
   cursor: pointer;
   display: flex;
   height: 12rem;
@@ -187,38 +181,61 @@ hr {
 
 /* projects */
 
-#projects_header, #about_header {
-  background-color: $lightblue;
-  font-family: Oswald;
-  font-size: calc(7vw + 10px);
-  letter-spacing: 8px;
-  line-height: 12rem;
-  text-align: center;
-  text-transform: uppercase;
-  transition: width .5s;
-  width: 0vw;
-}
-
 .project_box {
   height: 100vh;
+  overflow: hidden;
   width: 100vw;
+}
 
-  .project_box_white {
-    background-color: red;
-    height: 14rem;
-    width: 85vw;
-  }
+.project_header {
+  font-family: Oswald;
+  font-size: 50px;
+  letter-spacing: 5px;
+  line-height: 20vh;
+  text-transform: uppercase;
+}
 
-  .project_box_black {
-    background-color: black;
-    display: block;
-    height: calc(100vh - 14rem);
-    width: 15vw;
-  }
+.left {
+  text-align: left;
+  padding-left: 2rem;
+}
 
-  .right {
-    float: right;
+.right {
+  text-align: right;
+  padding-right: 2rem;
+}
+
+.project_box_black {
+  align-items: center;
+  background-color: black;
+  display: flex;
+  float: left;
+  height: 80vh;
+  justify-content: center;
+  width: 35vw;
+
+  button {
+    border: 1px solid black;
+    background-color: white;
+    color: black;
+    cursor: pointer;
+    height: 50px;
+    transition: all .25s;
+    width: 200px;
   }
+}
+
+button:hover {
+  background-color: black;
+  border: 1px solid white;
+  color: white;
+}
+
+.project_box_white {
+  background-color: white;
+  float: left;
+  height: 80vh;
+  width: 65vw;
 }
 
 /*

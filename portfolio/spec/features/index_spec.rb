@@ -1,17 +1,18 @@
 describe 'Index Page', type: :feature do
-    it 'displays project list' do
+    it 'displays a header' do
         visit '/'
 
-        expect(page).to have_css '.projects'
-        within '.projects' do
-            expect(page).to have_content 'My First Website'
-            expect(page).to have_content 'FizzBuzz'
+        expect(page).to have_css '.middle'
+        within '.middle' do
+            expect(page).to have_content 'portfolio'
+            expect(page).to have_content 'hanna linnéa nyman'
         end
     end
 
     it 'displays a navigation bar' do
         visit '/'
 
+        expect(page).to have_css '#nav'
         within '#nav' do
             expect(page).to have_content 'menu'
         end

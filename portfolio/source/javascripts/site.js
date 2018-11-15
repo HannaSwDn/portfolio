@@ -1,9 +1,10 @@
 // declaring DOM variables
-let menu_btn, menu, li_one, li_two, li_three, li_four, nav, projects_header
+let menu_btn, menu, li_one, li_two, li_three, li_four, nav
+
+let headers = []
+headers.push()
 // setting DOM variables and event listeners when the browser has been loaded
 window.onload = function() {
-    projects_header = document.querySelector('#projects_header')
-    about_header = document.querySelector('#about_header')
     nav = document.querySelector('#nav')
     menu = document.querySelector('#menu')
     li_one = document.querySelector('#li-one')
@@ -23,17 +24,17 @@ window.onload = function() {
 
     li_two.addEventListener('click', event => {
         closeMenu()
-        setTimeout(function() { window.open('about.html', '_blank'); }, 820);
+        setTimeout(function() { window.open('about.html', '_self'); }, 820);
     })
 
     li_three.addEventListener('click', event => {
         closeMenu()
-        setTimeout(function() { window.open('projects.html', '_blank'); }, 820);
+        setTimeout(function() { window.open('projects.html', '_self'); }, 820);
     })
 
     li_four.addEventListener('click', event => {
         closeMenu()
-        setTimeout(function() { window.open('contact.html', '_blank'); }, 820);
+        setTimeout(function() { window.open('contact.html', '_self'); }, 820);
     })
 
     li_five.addEventListener('click', event => {
@@ -43,13 +44,6 @@ window.onload = function() {
     document.addEventListener('scroll', event => {
         let offset = window.pageYOffset;
         menu.style.top = offset + 'px'
-
-        let offset_top = projects_header.offsetTop
-        if (offset + 500 >= offset_top) {
-            projects_header.style.width = '100%'
-        } else {
-            projects_header.style.width = '0%'
-        }
     })
 }
 
