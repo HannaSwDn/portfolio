@@ -1,10 +1,12 @@
 // declaring DOM variables
-let menu_btn, menu, li_one, li_two, li_three, li_four, nav
+let menu_btn, menu, li_one, li_two, li_three, li_four, nav, arrows, about_me
 
 let headers = []
 headers.push()
 // setting DOM variables and event listeners when the browser has been loaded
 window.onload = function() {
+    about_me = document.querySelector('#about_me')
+    arrows = document.querySelectorAll('.arrow')
     nav = document.querySelector('#nav')
     menu = document.querySelector('#menu')
     li_one = document.querySelector('#li-one')
@@ -42,8 +44,15 @@ window.onload = function() {
     })
 
     document.addEventListener('scroll', event => {
-        let offset = window.pageYOffset;
+        let offset = window.pageYOffset
         menu.style.top = offset + 'px'
+    })
+
+    document.addEventListener('scroll', event => {
+        let offset = window.pageYOffset
+        if (offset + 800 >= about_me.offsetTop) {
+            about_me.style.color = 'red'
+        }
     })
 }
 

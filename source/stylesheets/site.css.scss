@@ -29,6 +29,18 @@ body {
   animation: width .5s;
 }
 
+#about_me {
+  font-family: Oswald;
+  font-size: 75px;
+  line-height: 30vh;
+  padding-right: 5rem;
+  text-align: right;
+  text-transform: uppercase;
+  transition: all .5s;
+  width: 0vw;
+  white-space: nowrap;
+}
+
 /* landing page / homepage */
 
 .top, .bottom {
@@ -38,7 +50,7 @@ body {
 
 .top_one {
   background-color: black;
-  width: 85vw;
+  width: 84vw;
 }
 
 .middle {
@@ -76,10 +88,20 @@ hr {
 }
 
 .bottom_one {
+  align-items: center;
   background-color: black;
+  display: flex;
   float: left;
   height: 12rem;
+  justify-content: center;
   width: 15vw;
+
+  p {
+    animation: arrow 3s infinite;
+    color: white;
+    cursor: pointer;
+    font-size: 40px;
+  }
 }
 
 .bottom_two {
@@ -195,6 +217,12 @@ hr {
   text-transform: uppercase;
 }
 
+.project_description {
+  font-size: 25px;
+  line-height: 5vh;
+  text-align: center;
+}
+
 .left {
   text-align: left;
   padding-left: 2rem;
@@ -279,5 +307,19 @@ keyframes
 
   100% {
     width: 100%;
+  }
+}
+
+@keyframes arrow {
+  0% {
+    color: white;
+  }
+
+  50% {
+    color: black;
+  }
+
+  100% {
+    color: white;
   }
 }
