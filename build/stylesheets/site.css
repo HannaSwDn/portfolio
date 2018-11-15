@@ -1,0 +1,234 @@
+@import url("https://fonts.googleapis.com/css?family=Montserrat:300,400,600");
+@import url("https://fonts.googleapis.com/css?family=Oswald");
+.lightblue {
+  background-color: #eef7fa; }
+
+.lightpink {
+  background-color: #fff6f7; }
+
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: Montserrat;
+  font-weight: 300;
+  margin: 0;
+  overflow-x: hidden;
+  padding: 0; }
+
+body {
+  font-size: 10px; }
+
+.home {
+  -webkit-animation: width .5s;
+          animation: width .5s; }
+
+/* landing page / homepage */
+.top, .bottom {
+  height: 12rem;
+  width: 100vw; }
+
+.top_one {
+  background-color: black;
+  width: 85vw; }
+
+.middle {
+  background-color: white;
+  height: calc(100vh - 24rem);
+  text-align: center;
+  text-transform: uppercase; }
+  .middle p {
+    font-size: 30px;
+    font-weight: 600;
+    letter-spacing: 10px; }
+  .middle p:first-child {
+    padding-top: 10rem; }
+
+hr {
+  background-color: black;
+  border: none;
+  height: 2px;
+  margin: auto;
+  margin-bottom: 15px;
+  margin-top: 15px;
+  width: 50px; }
+
+#name {
+  color: black;
+  font-size: 20px;
+  font-weight: 600;
+  letter-spacing: 10px; }
+
+.bottom_one {
+  background-color: black;
+  float: left;
+  height: 12rem;
+  width: 15vw; }
+
+.bottom_two {
+  background-color: #fff6f7;
+  float: left;
+  height: 12rem;
+  width: 85vw; }
+
+/* about me */
+/* navigation */
+#nav {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: rgba(255, 255, 255, 0.9);
+  cursor: pointer;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 12rem;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: fixed;
+  right: 0;
+  text-transform: uppercase;
+  top: 0;
+  width: 15vw; }
+  #nav p {
+    font-size: 15px;
+    letter-spacing: 4px;
+    padding-right: 6px; }
+  #nav #hamburger {
+    cursor: pointer;
+    float: right; }
+    #nav #hamburger .line {
+      background-color: black;
+      height: 1px;
+      margin-bottom: 7px;
+      margin-top: 7px;
+      -webkit-transition: all .5s;
+      transition: all .5s;
+      width: 40px; }
+    #nav #hamburger #line_one {
+      width: 20px; }
+    #nav #hamburger #line_two {
+      width: 40px; }
+    #nav #hamburger #line_three {
+      width: 30px; }
+  #nav #hamburger:hover #line_one {
+    width: 40px; }
+  #nav #hamburger:hover #line_two {
+    width: 30px; }
+  #nav #hamburger:hover #line_three {
+    width: 20px; }
+
+#menu {
+  display: none;
+  height: 100vh;
+  position: absolute;
+  width: 100vw; }
+  #menu ul {
+    list-style-type: none; }
+    #menu ul li {
+      background-color: rgba(0, 0, 0, 0.9);
+      color: white;
+      cursor: pointer;
+      font-size: 25px;
+      letter-spacing: 5px;
+      line-height: 20vh;
+      opacity: 0;
+      padding-left: 3rem;
+      text-transform: uppercase;
+      -webkit-transition: all .5s;
+      transition: all .5s; }
+    #menu ul li:hover {
+      letter-spacing: 10px; }
+
+/* projects */
+.project_box {
+  height: 100vh;
+  overflow: hidden;
+  width: 100vw; }
+
+.project_header {
+  font-family: Oswald;
+  font-size: 50px;
+  letter-spacing: 5px;
+  line-height: 20vh;
+  text-transform: uppercase; }
+
+.left {
+  text-align: left;
+  padding-left: 2rem; }
+
+.right {
+  text-align: right;
+  padding-right: 2rem; }
+
+.project_box_black {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: black;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  float: left;
+  height: 80vh;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 35vw; }
+  .project_box_black button {
+    border: 1px solid black;
+    background-color: white;
+    color: black;
+    cursor: pointer;
+    height: 50px;
+    -webkit-transition: all .25s;
+    transition: all .25s;
+    width: 200px; }
+
+button:hover {
+  background-color: black;
+  border: 1px solid white;
+  color: white; }
+
+.project_box_white {
+  background-color: white;
+  float: left;
+  height: 80vh;
+  width: 65vw; }
+
+/*
+
+media queries
+
+*/
+@media screen and (max-width: 900px) {
+  .black, .top_one {
+    width: 100vw; }
+
+  .white {
+    display: none; }
+
+  #nav {
+    bottom: 0;
+    height: 5rem;
+    left: 0;
+    top: auto;
+    width: 100vw; }
+
+  .top_two {
+    width: 0vw; } }
+/*
+
+keyframes
+
+*/
+@-webkit-keyframes width {
+  0% {
+    width: 0%; }
+  100% {
+    width: 100%; } }
+@keyframes width {
+  0% {
+    width: 0%; }
+  100% {
+    width: 100%; } }
