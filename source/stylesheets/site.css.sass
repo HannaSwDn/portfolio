@@ -38,33 +38,30 @@ body
   width: 85vw
 
 .middle
+  align-items: center
   background-color: white
+  display: flex
   height: 56vh
+  justify-content: center
   min-height: 20rem
-  text-align: center
-  text-transform: uppercase
+
+  hr
+    background-color: black
+    border: none
+    height: 2px
+    margin: 15px auto 15px auto
+    width: 50px
 
   p
     font-size: 30px
-    font-weight: 300
+    font-weight: 600
+    letter-spacing: 8px
+    text-align: center
+    text-transform: uppercase
 
-  p:first-child
-    letter-spacing: 10px
-    padding-top: 10rem
-
-hr
-  background-color: black
-  border: none
-  height: 1px
-  margin: auto
-  margin-bottom: 15px
-  margin-top: 15px
-  width: 50px
-
-#name
-  color: black
-  font-size: 20px
-  letter-spacing: 5px
+  #name
+    font-size: 25px
+    letter-spacing: 3px
 
 .bottom_one
   background-color: black
@@ -228,9 +225,6 @@ li:first-child
   transition: all .5s
   width: 100vw
 
-#projects_header
-  line-height: 100%
-
 /* media queries */
 
 @media screen and (max-width: 900px)
@@ -241,8 +235,8 @@ li:first-child
     display: none
 
   #nav
+    background-color: transparent
     animation: none
-    background-color: rgba(0, 0, 0, .9)
     color: white
     left: 0
     top: 0
