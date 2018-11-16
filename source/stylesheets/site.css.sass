@@ -129,7 +129,6 @@ hr
   
     #line_three
       width: 30px
-  
 
   #hamburger:hover #line_one
     width: 40px
@@ -170,6 +169,7 @@ li:first-child
 .li_box
   background-color: white
   height: auto
+  padding: 2px
   transition: all .15s ease-in
   width: auto
 
@@ -204,9 +204,27 @@ li:first-child
 
 #btn_message
   border: 1px solid black
+  cursor: pointer
+  font-size: 13px
   height: 50px
   text-transform: uppercase
-  width: 200px 
+  transition: all .25s
+  width: 200px
+
+#btn_message:hover
+  background-color: black
+  color: white
+
+#btn_message:focus
+  outline: none
+
+#message
+  background-color: rgba(0, 0, 0, .9)
+  height: 100vh
+  left: 0
+  position: absolute
+  top: 0
+  width: 100vw
 
 /* media queries */
 

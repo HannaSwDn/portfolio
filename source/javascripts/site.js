@@ -4,7 +4,7 @@ let menu_btn, menu, li_one, li_two, li_three, li_four, nav, arrows, about_me, fo
 // setting DOM variables and event listeners when the browser has been loaded
 window.onload = function() {
     btn_message = document.querySelector('#btn_message')
-    form = document.querySelector('#contact_form')
+    div_form = document.querySelector('#message')
     about_me = document.querySelector('#about_me')
     arrows = document.querySelectorAll('.arrow')
     nav = document.querySelector('#nav')
