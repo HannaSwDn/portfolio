@@ -5,15 +5,15 @@ title: Contact Me
 .home
     .top.top_one
         .top_two
-    .middle.no_padding
-        %p.contact phone: 0739231591
-        %p.contact email: hannanyman.sk@gmail.com
+    .middle.middle_contact
         %button#btn_message send me a message!
     .bottom
         .bottom_one
         .bottom_two
 // this will show up when user clicks on send message button
 #message
+    #close
+        %p close
     .contact-form#contact_form
         .form.open-form#form
             %form{netlify: "#", name: "contact form"}
@@ -25,4 +25,4 @@ title: Contact Me
                     %button#submit-form-button{type: "submit"} Submit
                     %button#close-form-button Close
 
-                    
+                

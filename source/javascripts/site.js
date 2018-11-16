@@ -47,6 +47,11 @@ window.onload = function() {
         let offset = window.pageYOffset
         menu.style.top = offset + 'px'
     })
+
+    btn_message.addEventListener('click', event => {
+        div_form.style.display = 'block'
+        setTimeout(function(){ div_form.style.opacity = '1' }, 20);
+    })
 }
 
 const openMenu = () => {
