@@ -1,0 +1,275 @@
+$lightblue: #eef7fa
+$lightpink: #fff6f7
+
+.lightblue
+  background-color: $lightblue
+
+.lightpink
+  background-color: $lightpink
+
+@import url('https://fonts.googleapis.com/css?family=Montserrat:300,400,600')
+@import url('https://fonts.googleapis.com/css?family=Oswald')
+
+*
+  box-sizing: border-box
+  font-family: Montserrat
+  font-weight: 300
+  margin: 0
+  overflow-x: hidden
+  padding: 0
+
+body
+  font-size: 10px
+
+.home
+  animation: width .5s
+
+#about_me
+  font-family: Oswald
+  font-size: 75px
+  line-height: 30vh
+  padding-right: 5rem
+  text-align: right
+  text-transform: uppercase
+  transition: all .5s
+  width: 0vw
+  white-space: nowrap
+
+/* landing page / homepage */
+
+.top, .bottom
+  height: 12rem
+  width: 100vw
+
+.top_one
+  background-color: black
+  width: 85vw
+
+.middle
+  background-color: white
+  height: calc(100vh - 24rem)
+  text-align: center
+  text-transform: uppercase
+
+  p
+    font-size: 30px
+    font-weight: 300
+
+  p:first-child
+    letter-spacing: 10px
+    padding-top: 10rem
+
+hr
+  background-color: black
+  border: none
+  height: 1px
+  margin: auto
+  margin-bottom: 15px
+  margin-top: 15px
+  width: 50px
+
+#name
+  color: black
+  font-size: 20px
+  letter-spacing: 5px
+
+.bottom_one
+  background-color: black
+  float: left
+  height: 12rem
+  width: 15vw
+
+.bottom_two
+  background-color: $lightpink
+  float: left
+  height: 12rem
+  width: 85vw
+
+/* about me */
+
+/* navigation */
+
+#nav
+  align-items: center
+  animation: blink 4.5s infinite
+  background-color: rgba(255, 255, 255, .9)
+  cursor: pointer
+  display: flex
+  height: 12rem
+  justify-content: center
+  position: fixed
+  right: 0
+  text-transform: uppercase
+  top: 0
+  width: 15vw
+
+  p
+    font-size: 15px
+    letter-spacing: 4px
+    padding-right: 6px
+
+  #hamburger
+    cursor: pointer
+    float: right
+  
+    .line
+      animation: blink_bg 4.5s infinite
+      background-color: black
+      height: 1px
+      margin-bottom: 7px
+      margin-top: 7px
+      transition: all .5s
+      width: 40px
+
+    #line_one
+      width: 20px
+  
+    #line_two
+      width: 40px
+  
+    #line_three
+      width: 30px
+  
+
+  #hamburger:hover #line_one
+    width: 40px
+
+  #hamburger:hover #line_two
+    width: 30px
+
+  #hamburger:hover #line_three
+    width: 20px
+
+#menu
+  display: none
+  background-clip: text
+  background-color: white
+  height: 0vh
+  position: absolute
+  right: 0
+  top: 0
+  transition: all .5s
+  width: 15vw
+
+ul
+  list-style-type: none
+
+li
+  align-items: center
+  cursor: pointer
+  display: flex
+  font-size: 15px
+  height: 10vh
+  justify-content: center
+  text-align: center
+  text-transform: uppercase
+
+li:first-child
+  margin-top: 25vh
+
+.li_box
+  background-color: white
+  height: auto
+  transition: all .15s ease-in
+  width: auto
+
+.li_box:hover
+  background-color: black
+  color: white
+
+/* projects */
+
+.project_box
+  background-image: linear-gradient(rgba(255, 255, 255, .8), rgba(255, 255, 255, .7)), url('../images/bg_1.png')
+  background-position: center
+  background-size: cover
+  float: left
+  height: 50vh
+  width: 50vw
+
+  p
+    font-size: 30px
+    line-height: 50vh
+    text-align: center
+
+/* contact */
+
+.no_padding p:first-child
+  padding-top: 0rem
+
+.contact
+  font-size: 15px
+  letter-spacing: 0px
+  text-align: left
+
+#btn_message
+  border: 1px solid black
+  height: 50px
+  text-transform: uppercase
+  width: 200px 
+
+/* media queries */
+
+@media screen and (max-width: 900px)
+  .black, .top_one
+    width: 100vw
+
+  .white
+    display: none
+
+  #nav
+    bottom: 0
+    height: 5rem
+    left: 0
+    top: auto
+    width: 100vw
+
+  .top_two
+    width: 0vw
+
+  #menu, li
+    width: 100vw
+  
+  #menu
+    background-color: rgba(255, 255, 255, .95)
+
+/* keyframes */
+
+@keyframes width
+  0%
+    width: 0%
+
+  100%
+    width: 100%
+
+@keyframes blink
+  0%
+    color: black
+
+  30%
+    color: black
+
+  50%
+    color: white
+
+  70%
+    color: black
+  
+  100%
+    color: black
+
+@keyframes blink_bg
+  0%
+    background-color: black
+
+  30%
+    background-color: black
+
+  50%
+    background-color: white
+
+  70%
+    background-color: black
+
+  100%
+    background-color: black

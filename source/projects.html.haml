@@ -10,24 +10,11 @@ title: Projects
         %hr
     .bottom
         .bottom_one
-            %p ▼
         .bottom_two
 
 // = partial 'partials/projects'
 
 .projects
     - data.projects.each do |project|
-        - if project[:id] % 2 == 0
-            .project_box
-                %p.project_header.lightpink.left= project[:name]
-                .project_box_black
-                    %button= project[:link]
-                .project_box_white
-                    %p.project_description= project[:description]
-        - elsif project[:id] % 2 != 0
-            .project_box
-                %p.project_header.lightblue.right= project[:name]
-                .project_box_white
-                    %p.project_description= project[:description]
-                .project_box_black
-                    %button= project[:link]
+        .project_box
+            %p.project_header= project[:name]
