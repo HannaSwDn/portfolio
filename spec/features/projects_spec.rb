@@ -1,6 +1,6 @@
 describe 'Projects Page', type: :feature do
     it 'displays a header' do
-        visit '/'
+        visit 'projects.html'
 
         within '.middle' do
             expect(page).to have_content 'projects'
@@ -8,10 +8,13 @@ describe 'Projects Page', type: :feature do
     end
 
     it 'displays projects' do
-        visit '/'
+        visit 'projects.html'
 
-        within '.project' do
+        within '.projects' do
             expect(page).to have_content 'FizzBuzz'
+            expect(page).to have_content 'Number Memory Test'
+            expect(page).to have_content 'Club Sandwich'
+            expect(page).to have_content 'Upcoming'
         end
     end
 end
