@@ -10,14 +10,26 @@
   techniques: Ruby, Rspec
   id: 2
   
-- name: Club Sandwich
-  description: A sandwich shop website I made to practice CSS
-  link: no link yet
+- name: Password Generator
+  description: A password generator I made so the user can get a password (this site will be re-made with HAML and SASS)
+  link: https://elastic-murdock-2f68ca.netlify.com/
   techniques: HTML, CSS, JavaScript
   id: 3
+
+- name: Fast Typing Test
+  description: How fast can you type the whole alphabet? (this will be re-made with test driven development, HAML and SASS)
+  link: https://hannaswdn.github.io/alphabet/
+  techniques: HTML, CSS, JavaScript
+  id: 4
 
 - name: Upcoming
   description: upcoming
   link: upcoming
   techniques: upcoming
-  id: 4
+  id: 5
+
+- name: Upcoming
+  description: upcoming
+  link: upcoming
+  techniques: upcoming
+  id: 6

@@ -6,7 +6,10 @@ title: Projects
     .top.top_one
         .top_two
     .middle
-        %p projects
+        .middle_text_box
+            %p projects
+            %hr
+            %p.p_down scroll down
     .bottom
         .bottom_one
         .bottom_two
@@ -17,6 +20,10 @@ title: Projects
     - data.projects.each do |project|
         .project_box
             .project_info
-                %h4= project[:name]
+                %h4.project_name= project[:name]
+                %p.project_description= project[:description]
+                %p techniques used:
+                %p.project_techniques= project[:techniques]
             .project_link
-                %button go to project
+                %a{:href => project[:link], :target => '_blank'}
+                    %button go to project
