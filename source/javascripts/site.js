@@ -1,9 +1,8 @@
 // declaring DOM variables
-let menu_btn, menu, li_one, li_two, li_three, li_four, nav, arrows, about_me, form, btn_message
+let menu_btn, menu, li_one, li_two, li_three, li_four, nav, arrows, about_me, form
 
 // setting DOM variables and event listeners when the browser has been loaded
 window.onload = function() {
-    btn_message = document.querySelector('#btn_message')
     div_form = document.querySelector('#message')
     about_me = document.querySelector('#about_me')
     arrows = document.querySelectorAll('.arrow')
@@ -36,7 +35,8 @@ window.onload = function() {
 
     li_four.addEventListener('click', event => {
         closeMenu()
-        setTimeout(function() { window.open('contact.html', '_self'); }, 320);
+        div_form.style.display = 'block'
+        setTimeout(function() { div_form.style.opacity = '1' }, 10);
     })
 
     li_five.addEventListener('click', event => {
@@ -46,11 +46,6 @@ window.onload = function() {
     document.addEventListener('scroll', event => {
         let offset = window.pageYOffset
         menu.style.top = offset + 'px'
-    })
-
-    btn_message.addEventListener('click', event => {
-        div_form.style.display = 'block'
-        setTimeout(function(){ div_form.style.opacity = '1' }, 20);
     })
 }
 
