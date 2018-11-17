@@ -16,9 +16,11 @@ $lightpink: #fff6f7
   font-weight: 300
   margin: 0
   overflow-x: hidden
-  overflow-y: scroll
   padding: 0
   -webkit-overflow-scrolling: touch
+
+*:focus
+  outline: none
 
 body
   font-size: 10px
@@ -93,6 +95,7 @@ body
   text-transform: uppercase
   top: 0
   width: 15vw
+  z-index: 4
 
   p
     font-size: 15px
@@ -146,7 +149,6 @@ ul
 
 li
   align-items: center
-  cursor: pointer
   display: flex
   font-size: 15px
   height: 10vh
@@ -159,6 +161,7 @@ li:first-child
 
 .li_box
   background-color: white
+  cursor: pointer
   height: auto
   padding: 2px
   transition: all .15s ease-in
@@ -171,22 +174,47 @@ li:first-child
 /* projects */
 
 .project_box
-  background-image: linear-gradient(rgba(255, 255, 255, .8), rgba(255, 255, 255, .7)), url('../images/bg_1.png')
-  background-position: center
-  background-size: cover
   float: left
   height: 50vh
-  width: 50vw
+  width: 42.5vw
 
-  p
+  .project_info
+    position: absolute
+    z-index: 1
+
+  .project_link
+    background-color: transparent
+    color: transparent
     font-size: 30px
     line-height: 50vh
+    position: absolute
     text-align: center
+    transition: all .5s
+    width: 42.5vw
+    z-index: 2
+  
+  .project_link:hover
+    background-color: rgba(0, 0, 0, .9)
+    
+    button
+      opacity: 1
+
+  button
+    border: 1px solid black
+    cursor: pointer
+    height: 50px
+    opacity: 0
+    text-transform: uppercase
+    transition: all .5s
+    width: 200px
+
+h4
+  font-size: 20px
+  line-height: 5vh
+  text-align: center
+  text-transform: uppercase
 
 /* contact */
-
-.no_padding p:first-child
-  padding-top: 0rem
 
 .contact
   font-size: 15px
@@ -228,7 +256,7 @@ li:first-child
 /* media queries */
 
 @media screen and (max-width: 900px)
-  .black, .top_one
+  .black, .top_one, #nav, #menu, li
     width: 100vw
 
   .white
@@ -240,16 +268,12 @@ li:first-child
     color: white
     left: 0
     top: 0
-    width: 100vw
 
   .line
     animation: none
     background-color: white
 
-  .top, .top_one, .bottom, .bottom_one, .bottom_two
-    height: 15vh
-
-  #nav
+  .top, .top_one, .bottom, .bottom_one, .bottom_two, #nav
     height: 15vh
 
   .top_two
@@ -257,9 +281,6 @@ li:first-child
 
   .middle
     height: 70vh
-
-  #menu, li
-    width: 100vw
   
   #menu
     background-color: rgba(255, 255, 255, .95)

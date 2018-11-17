@@ -16,4 +16,7 @@ title: Projects
 .projects
     - data.projects.each do |project|
         .project_box
-            %p.project_header= project[:name]
+            .project_info
+                %h4= project[:name]
+            .project_link
+                %button go to project
