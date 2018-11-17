@@ -6,7 +6,7 @@
 
 - name: FizzBuzz
   description: My first Test driven ruby project
-  link: no link yet
+  link: https://github.com/HannaSwDn/fizz_buzz.git
   techniques: Ruby, Rspec
   id: 2
   
