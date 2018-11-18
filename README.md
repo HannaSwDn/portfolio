@@ -19,4 +19,8 @@ As a visitor<br>
 In order to enter the page smoothly from my phone<br>
 I would like the page to be responsive<br>
 
+### Link to the page (deployed on Netlify)
+https://mystifying-knuth-bccca9.netlify.com/
+
 ### Acknowledge
+Thanks to all coaches ★
