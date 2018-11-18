@@ -46,6 +46,12 @@ body
 button
   cursor: pointer
 
+#send
+  color: white
+  font-size: 30px
+  line-height: 10vh
+  text-transform: uppercase
+
 /* landing page / homepage */
 
 .top, .bottom
@@ -431,31 +437,49 @@ li:first-child
   background-color: white
   border-right: 2px solid black
   height: 100vh
-  min-width: 600px
   text-align: center
   width: 85vw
 
+  p
+    font-size: 20px
+
+  .job_name
+    font-weight: 400
+
+  .job_date
+    font-size: 15px
+    letter-spacing: 2px
+    text-transform: uppercase
+  
+  .job_task
+    font-size: 15px
+    
   h1
     font-size: 30px
-    line-height: 10vh
+    line-height: 4rem
 
   hr
     background-color: black
     border: none
     height: 2px
-    width: 20vw
+    margin: 20px auto 20px auto
+    width: 50px
 
   .cv_wrapper_top
     background-color: black
     color: white
-    height: 8rem
-    min-width: 600px
+    height: 6rem
     padding-left: 2rem
     width: 85vw
 
     p
       font-size: 15px
       text-transform: uppercase
+
+  h2
+    font-size: 25px
+    font-weight: bold
+    padding: 20px 0px 20px 0px
 
   .language_box
     align-items: center
@@ -468,25 +492,14 @@ li:first-child
     p
       font-size: 20px
 
-    .bar
-      border: 1px solid black
-      height: 20px
-      margin-left: 10px
-      width: 200px
+  .bar
+    border: 1px solid black
+    height: 20px
+    margin: auto
+    width: 200px
 
-    #bar_first, #bar_second, #bar_third, #bar_fourth
-      background-color: green
-      height: 20px
-      transition: all .5s
-
-    #bar_first
-      width: 0px
-
-    #bar_second
-      width: 0px
-
-    #bar_third
-      width: 0px
-    
-    #bar_fourth
-      width: 0px
+  #bar_1, #bar_2, #bar_3, #bar_4, #bar_5, #bar_6, #bar_7, #bar_8
+    background-color: green
+    height: 18px
+    transition: all .75s
+    width: 0px

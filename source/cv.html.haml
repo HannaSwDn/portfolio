@@ -5,35 +5,70 @@ title: CV
 .cv_wrapper
     .cv_wrapper_top
         %h1 CV - Hanna Linnéa Nyman
-        %p full-stack web developer student
+        %p full-stack web developer student at Craft Academy
 
-    %h2 working experience:
+    %h2 Working experience:
     - data.job.each do |job|
-        %p= job[:name]
+        %p.job_name= job[:name]
+        %p.job_date= job[:date]
+        %p.job_task= job[:task]
+        %br
 
-    %h2 Programming skills:
-    .language_box
-        %p HTML
-        .bar
-            #bar_first
+    %hr
 
-    .language_box
-        %p CSS
-        .bar
-            #bar_second
+    %h2 My skills:
+    %p.language HTML
+    .bar
+        #bar_1
 
-    .language_box
-        %p JavaScript
-        .bar
-            #bar_third
+    %p.language CSS
+    .bar
+        #bar_2
 
-    .language_box
-        %p Ruby
-        .bar
-            #bar_fourth
+    %p.language JavaScript
+    .bar
+        #bar_3
+
+    %p.language Ruby
+    .bar
+        #bar_4
+
+    %p.language SASS
+    .bar
+        #bar_5
+
+    %p.language HAML
+    .bar
+        #bar_6
+
+    %p.language Rspec
+    .bar
+        #bar_7
+
+    %p.language Cucumber
+    .bar
+        #bar_8
+
+    %hr
 
     %h2 Education:
     - data.education.each do |program|
         %p= program[:name]
         %p= program[:location]
         %p= program[:graduation]
+
+    %hr
+
+    %h2 Languages:
+    %p Swedish
+    %p English
+
+    %hr
+
+    %h2 Interests:
+    %p Economy and stocks
+    %p Business
+    %p Movie sets
+    %p Languages and culture
+
+    %hr
