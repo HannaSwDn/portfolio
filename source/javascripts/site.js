@@ -50,8 +50,10 @@ window.onload = function() {
 
         if (offset + 500 >= about_header.offsetTop) {
             about_header.style.width = '100vw'
+            about_header.style.opacity = '1'
         } else {
             about_header.style.width = '0vw'
+            about_header.style.opacity = '0'
         }
     })
 }

@@ -89,12 +89,23 @@ button
 /* about me */
 
 #about_me_header
+  border-top: 2px solid black
+  border-bottom: 2px solid black
   font-size: 30px
-  line-height: 30vh
+  font-weight: 400
+  letter-spacing: 2px
+  line-height: 22vh
+  margin-bottom: 10px
+  opacity: 0
+  padding-right: 5rem
   text-align: right
-  text-transform: uppercase
-  transition: width .5s
+  transition: all .5s
+  white-space: nowrap
   width: 0vw
+
+.about_me_paragraph
+  font-size: 20px
+  text-align: center
 
 /* navigation */
 
@@ -318,6 +329,9 @@ li:first-child
 
   .project_box, .project_info, .project_link
     width: 50vw
+
+  #about_me_header
+    line-height: 15vh
 
 // make the projects responsive
 
