@@ -1,8 +1,9 @@
 // declaring DOM variables
-let menu_btn, menu, li_one, li_two, li_three, li_four, nav, div_form
+let menu_btn, menu, li_one, li_two, li_three, li_four, nav, div_form, about_header
 
 // setting DOM variables and event listeners when the browser has been loaded
 window.onload = function() {
+    about_header = document.querySelector('#about_me_header')
     div_form = document.querySelector('#message')
     nav = document.querySelector('#nav')
     menu = document.querySelector('#menu')
@@ -46,6 +47,12 @@ window.onload = function() {
         menu.style.top = offset + 'px'
         div_form.style.top = offset + 'px'
         console.log(offset)
+
+        if (offset + 500 >= about_header.offsetTop) {
+            about_header.style.width = '100vw'
+        } else {
+            about_header.style.width = '0vw'
+        }
     })
 }
 
