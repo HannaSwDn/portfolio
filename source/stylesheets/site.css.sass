@@ -1,8 +1,10 @@
 $lightblue: #eef7fa
 $lightpink: #fff6f7
 $black-transparent: rgba(0, 0, 0, .9)
+$white-transparent: rgba(255, 255, 255, .9)
 $lightgrey: #f6f6f6
 $violet: #f4f4ff
+$pastelred: #ffeae8
 
 .lightblue
   background-color: $lightblue
@@ -11,8 +13,13 @@ $violet: #f4f4ff
   background-color: $lightpink
 
 #lightgrey
+  background-color: $lightgrey
+
+#violet
   background-color: $violet
-  // lightgrey
+
+#pastelred
+  background-color: $pastelred
 
 @import url('https://fonts.googleapis.com/css?family=Montserrat:300,400,600')
 @import url('https://fonts.googleapis.com/css?family=Oswald')
@@ -74,6 +81,7 @@ button
     white-space: nowrap
 
   .p_down
+    animation: blink 4.5s infinite
     font-size: 22px
     letter-spacing: 5px
 
@@ -91,6 +99,19 @@ button
 
 /* about me */
 
+.about_content
+  height: auto
+  padding-left: 20vw
+  padding-right: 20vw
+  width: 100vw
+
+  hr
+    background-color: black
+    border: none
+    height: 1px
+    margin: 15px auto 15px auto
+    width: 50px
+
 #about_me_header
   border-top: 2px solid black
   border-bottom: 2px solid black
@@ -98,7 +119,6 @@ button
   font-weight: 400
   letter-spacing: 2px
   line-height: 22vh
-  margin-bottom: 10px
   opacity: 0
   padding-right: 5rem
   text-align: right
@@ -106,6 +126,12 @@ button
   transition: all .5s
   white-space: nowrap
   width: 0vw
+
+.about_question
+  font-size: 25px
+  font-weight: 400
+  padding: 20px 0px 20px 0px
+  text-align: center
 
 .about_me_paragraph
   font-size: 20px
@@ -160,8 +186,7 @@ button
   animation: blink_bg 4.5s infinite
   background-color: black
   height: 1px
-  margin-bottom: 7px
-  margin-top: 7px
+  margin: 7px 0px 7px 0px
   transition: all .5s
   width: 40px
 
@@ -245,13 +270,13 @@ li:first-child
     width: 200px
 
 .project_link:hover
-  background-color: $black-transparent
+  background-color: $white-transparent
 
   button
     opacity: 1
 
   button:hover
-    background-color: red
+    background-color: $pastelred
 
 .project_name
   font-size: 20px
@@ -335,11 +360,29 @@ li:first-child
     width: 50vw
 
   #about_me_header
+    font-size: 22px
+    letter-spacing: 0px
     line-height: 15vh
+    padding-right: 4rem
 
 @media screen and (max-width: 650px)
   .project_box, .project_info, .project_link
     width: 100vw
+
+  .about_content
+    paddding-left: 10vw
+    padding-right: 10vw
+  
+  #about_me_header
+    font-size: 18px
+    padding-right: 0rem
+    text-align: center
+  
+  .about_me_question
+    font-size: 15px
+
+  .about_me_paragraph
+    font-size: 15px
 
 /* keyframes */
 
@@ -358,7 +401,7 @@ li:first-child
     color: black
 
   50%
-    color: $lightpink
+    color: $lightblue
 
   70%
     color: black
@@ -382,17 +425,68 @@ li:first-child
   100%
     background-color: black
 
+/* CV */
 
+.cv_wrapper
+  background-color: white
+  border-right: 2px solid black
+  height: 100vh
+  min-width: 600px
+  text-align: center
+  width: 85vw
 
+  h1
+    font-size: 30px
+    line-height: 10vh
 
+  hr
+    background-color: black
+    border: none
+    height: 2px
+    width: 20vw
 
+  .cv_wrapper_top
+    background-color: black
+    color: white
+    height: 8rem
+    min-width: 600px
+    padding-left: 2rem
+    width: 85vw
 
+    p
+      font-size: 15px
+      text-transform: uppercase
 
+  .language_box
+    align-items: center
+    display: flex
+    height: auto
+    justify-content: center
+    margin: 10px auto 10px auto
+    width: auto
 
+    p
+      font-size: 20px
 
+    .bar
+      border: 1px solid black
+      height: 20px
+      margin-left: 10px
+      width: 200px
 
+    #bar_first, #bar_second, #bar_third, #bar_fourth
+      background-color: green
+      height: 20px
+      transition: all .5s
 
+    #bar_first
+      width: 0px
 
-.blank
-  height: 200vh
-  width: 100vw
+    #bar_second
+      width: 0px
+
+    #bar_third
+      width: 0px
+    
+    #bar_fourth
+      width: 0px

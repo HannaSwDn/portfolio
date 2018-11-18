@@ -1,0 +1,39 @@
+---
+title: CV
+---
+
+.cv_wrapper
+    .cv_wrapper_top
+        %h1 CV - Hanna Linnéa Nyman
+        %p full-stack web developer student
+
+    %h2 working experience:
+    - data.job.each do |job|
+        %p= job[:name]
+
+    %h2 Programming skills:
+    .language_box
+        %p HTML
+        .bar
+            #bar_first
+
+    .language_box
+        %p CSS
+        .bar
+            #bar_second
+
+    .language_box
+        %p JavaScript
+        .bar
+            #bar_third
+
+    .language_box
+        %p Ruby
+        .bar
+            #bar_fourth
+
+    %h2 Education:
+    - data.education.each do |program|
+        %p= program[:name]
+        %p= program[:location]
+        %p= program[:graduation]
