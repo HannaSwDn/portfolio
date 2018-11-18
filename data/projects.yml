@@ -11,7 +11,7 @@
   id: 2
   
 - name: Password Generator
-  description: A password generator I made so the user can get a password (this site will be re-made with HAML and SASS)
+  description: A password generator I made with my boyfriend so the user can get a password (this site will be re-made with HAML and SASS)
   link: https://elastic-murdock-2f68ca.netlify.com/
   techniques: HTML, CSS, JavaScript
   id: 3
