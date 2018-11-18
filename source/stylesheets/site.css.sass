@@ -2,6 +2,7 @@ $lightblue: #eef7fa
 $lightpink: #fff6f7
 $black-transparent: rgba(0, 0, 0, .9)
 $lightgrey: #f6f6f6
+$violet: #f4f4ff
 
 .lightblue
   background-color: $lightblue
@@ -10,7 +11,8 @@ $lightgrey: #f6f6f6
   background-color: $lightpink
 
 #lightgrey
-  background-color: $lightgrey
+  background-color: $violet
+  // lightgrey
 
 @import url('https://fonts.googleapis.com/css?family=Montserrat:300,400,600')
 @import url('https://fonts.googleapis.com/css?family=Oswald')
@@ -335,7 +337,9 @@ li:first-child
   #about_me_header
     line-height: 15vh
 
-// make the projects responsive
+@media screen and (max-width: 650px)
+  .project_box, .project_info, .project_link
+    width: 100vw
 
 /* keyframes */
 
@@ -377,6 +381,10 @@ li:first-child
 
   100%
     background-color: black
+
+
+
+
 
 
 
