@@ -1,11 +1,16 @@
 $lightblue: #eef7fa
 $lightpink: #fff6f7
+$black-transparent: rgba(0, 0, 0, .9)
+$lightgrey: #f6f6f6
 
 .lightblue
   background-color: $lightblue
 
 .lightpink
   background-color: $lightpink
+
+#lightgrey
+  background-color: $lightgrey
 
 @import url('https://fonts.googleapis.com/css?family=Montserrat:300,400,600')
 @import url('https://fonts.googleapis.com/css?family=Oswald')
@@ -146,7 +151,7 @@ button
   position: absolute
   right: 0
   top: 0
-  transition: all .5s
+  transition: opacity .5s
   width: 15vw
   z-index: 3
 
@@ -217,10 +222,13 @@ li:first-child
     width: 200px
 
 .project_link:hover
-  background-color: rgba(0, 0, 0, .9)
+  background-color: $black-transparent
 
   button
     opacity: 1
+
+  button:hover
+    background-color: red
 
 .project_name
   font-size: 20px
@@ -232,12 +240,13 @@ li:first-child
 
 .project_techniques
   color: red
-  font-size: 15px
+  font-size: 20px
+  font-weight: 400
 
 /* contact */
 
 #message
-  background-color: rgba(0, 0, 0, .9)
+  background-color: $black-transparent
   color: white
   display: none
   height: 100vh
@@ -277,7 +286,7 @@ li:first-child
     display: none
 
   #nav
-    background-color: rgba(0, 0, 0, .9)
+    background-color: $black-transparent
     animation: none
     color: white
     left: 0
@@ -301,6 +310,8 @@ li:first-child
 
   .project_box, .project_info, .project_link
     width: 50vw
+
+// make the projects responsive
 
 /* keyframes */
 

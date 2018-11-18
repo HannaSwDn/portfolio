@@ -22,10 +22,10 @@
   techniques: HTML, CSS, JavaScript
   id: 4
 
-- name: Upcoming
-  description: upcoming
-  link: upcoming
-  techniques: upcoming
+- name: Library Challenge
+  description: This is a challenge we made week 2 at the bootcamp
+  link: https://github.com/HannaSwDn/library-challenge.git
+  techniques: Ruby, Rspec, YAML
   id: 5
 
 - name: Upcoming

@@ -1,11 +1,9 @@
 // declaring DOM variables
-let menu_btn, menu, li_one, li_two, li_three, li_four, nav, arrows, about_me, form
+let menu_btn, menu, li_one, li_two, li_three, li_four, nav, div_form
 
 // setting DOM variables and event listeners when the browser has been loaded
 window.onload = function() {
     div_form = document.querySelector('#message')
-    about_me = document.querySelector('#about_me')
-    arrows = document.querySelectorAll('.arrow')
     nav = document.querySelector('#nav')
     menu = document.querySelector('#menu')
     li_one = document.querySelector('#li-one')
@@ -46,6 +44,8 @@ window.onload = function() {
     document.addEventListener('scroll', event => {
         let offset = window.pageYOffset
         menu.style.top = offset + 'px'
+        div_form.style.top = offset + 'px'
+        console.log(offset)
     })
 }
 
