@@ -28,8 +28,8 @@
   techniques: Ruby, Rspec, YAML
   id: 5
 
-- name: Upcoming
-  description: upcoming
-  link: upcoming
-  techniques: upcoming
+- name: Rock Paper Scissors
+  description: A test driven game we made at the bootcamp
+  link: https://jolly-hermann-0cf701.netlify.com
+  techniques: HTML, CSS, JavaScript, Cucumber
   id: 6
