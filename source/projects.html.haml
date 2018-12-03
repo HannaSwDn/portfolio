@@ -14,17 +14,13 @@ title: Projects
         .bottom_one
         .bottom_two#pastelred
 
-// = partial 'partials/projects'
-
 .projects
     - data.projects.each do |project|
-        .project_box
-            .project_info
-                %h4.project_name= project[:name]
-                %p.project_description= project[:description]
-                %p techniques used:
-                %p.project_techniques= project[:techniques]
-            .project_link
-                %a{:href => project[:link], :target => '_blank'}
-                    %button go to project
-
+        - if project[:id] % 2 == 0
+            .project_box
+                .project_box_left.lightpink
+                .project_box_right
+        - elsif project[:id] % 2 != 0
+            .project_box
+                .project_box_right
+                .project_box_left.lightblue

@@ -241,61 +241,28 @@ li:first-child
 .projects
   height: auto
   overflow-x: hidden
-  width: 90vw
+  padding: 5vw
+  width: 100vw
+  margin: auto
 
 .project_box
+  height: 60vh
+  margin-top: 5vw
+  overflow: hidden
+  width: 90vw
+
+.project_box:first-child
+  margin-top: 0vw
+
+.project_box_left
   float: left
-  height: 50vh
-  width: 42.5vw
+  height: 60vh
+  width: 45vw
 
-.project_info
-  height: 50vh
-  padding: 0px 10px 0px 10px
-  position: absolute
-  text-align: center
-  width: 42.5vw
-  z-index: 1
-
-.project_link
-  background-color: transparent
-  color: transparent
-  font-size: 30px
-  line-height: 50vh
-  position: absolute
-  text-align: center
-  transition: all .5s
-  width: 42.5vw
-  z-index: 2
-
-  button
-    border: 1px solid black
-    height: 50px
-    opacity: 0
-    text-transform: uppercase
-    transition: all .5s
-    width: 200px
-
-.project_link:hover
-  background-color: $white-transparent
-
-  button
-    opacity: 1
-
-  button:hover
-    background-color: $pastelred
-
-.project_name
-  font-size: 20px
-  padding: 10px 0px 10px 0px
-  text-transform: uppercase
-
-.project_description
-  font-size: 15px
-
-.project_techniques
-  color: red
-  font-size: 20px
-  font-weight: 400
+.project_box_right
+  float: left
+  height: 60vh
+  width: 45vw
 
 /* contact */
 
