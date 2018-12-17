@@ -1,472 +1,483 @@
-$lightblue: #eef7fa
-$lightpink: #fff6f7
-$black-transparent: rgba(0, 0, 0, .9)
-$white-transparent: rgba(255, 255, 255, .9)
-$lightgrey: #f6f6f6
-$violet: #f4f4ff
-$pastelred: #ffeae8
+// stylesheet for navbar
+@import 'nav.css.sass'
+@import 'scrollbar.css.sass'
 
-.lightblue
-  background-color: $lightblue
-
-.lightpink
-  background-color: $lightpink
-
-#lightgrey
-  background-color: $lightgrey
-
-#violet
-  background-color: $violet
-
-#pastelred
-  background-color: $pastelred
-
+// fonts
 @import url('https://fonts.googleapis.com/css?family=Montserrat:300,400,600')
 @import url('https://fonts.googleapis.com/css?family=Oswald')
 
+// global styles
 *
-  box-sizing: border-box
-  font-family: Montserrat
-  font-weight: 300
-  margin: 0
-  overflow-x: hidden
-  padding: 0
-  -webkit-overflow-scrolling: touch
-  -webkit-tap-highlight-color: rgba(0, 0, 0, 0)
+    box-sizing: border-box
+    font-family: Montserrat
+    margin: 0
+    overflow-x: hidden
+    padding: 0
 
-*:focus
-  outline: none
-
-body
-  font-size: 10px
-
+// landing page
 .home
-  animation: width .5s
-
-button
-  cursor: pointer
-
-#send
-  color: white
-  font-size: 30px
-  line-height: 10vh
-  text-transform: uppercase
-
-/* landing page / homepage */
-
-.top, .bottom
-  height: 22vh
-  min-height: 5rem
-  width: 100vw
-
-.top_one
-  background-color: black
-  width: 85vw
-
-.middle
-  align-items: center
-  background-color: white
-  display: flex
-  height: 56vh
-  justify-content: center
-  min-height: 20rem
-
-  hr
-    background-color: black
-    border: none
-    height: 2px
-    margin: 15px auto 15px auto
-    width: 50px
-
-  p
-    font-size: 30px
-    font-weight: 600
-    letter-spacing: 8px
-    text-align: center
-    text-transform: uppercase
-    white-space: nowrap
-
-  .p_down
-    animation: blink 4.5s infinite
-    font-size: 22px
-    letter-spacing: 5px
-
-.bottom_one
-  background-color: black
-  float: left
-  height: 22vh
-  width: 15vw
-
-.bottom_two
-  background-color: $lightpink
-  float: left
-  height: 22vh
-  width: 85vw
-
-/* about me */
-
-.about_content
-  height: auto
-  padding-left: 20vw
-  padding-right: 20vw
-  width: 100vw
-
-  hr
-    background-color: black
-    border: none
-    height: 1px
-    margin: 15px auto 15px auto
-    width: 50px
-
-#about_me_header
-  border-top: 2px solid black
-  border-bottom: 2px solid black
-  font-size: 30px
-  font-weight: 400
-  letter-spacing: 2px
-  line-height: 22vh
-  opacity: 0
-  padding-right: 5rem
-  text-align: right
-  text-transform: uppercase
-  transition: all .5s
-  white-space: nowrap
-  width: 0vw
-
-.about_question
-  font-size: 25px
-  font-weight: 400
-  padding: 20px 0px 20px 0px
-  text-align: center
-
-.about_me_paragraph
-  font-size: 20px
-  text-align: center
-
-/* navigation */
-
-#nav
-  align-items: center
-  animation: blink 4.5s infinite
-  background-color: white
-  cursor: pointer
-  display: flex
-  height: 22vh
-  justify-content: center
-  min-height: 5rem
-  position: fixed
-  right: 0
-  text-transform: uppercase
-  top: 0
-  width: 15vw
-  z-index: 4
-
-  p
-    font-size: 15px
-    letter-spacing: 4px
-    padding-right: 6px
-
-  #hamburger
-    cursor: pointer
-    float: right
-
-    #line_one
-      width: 20px
-  
-    #line_two
-      width: 40px
-  
-    #line_three
-      width: 30px
-
-  #hamburger:hover #line_one
-    width: 40px
-
-  #hamburger:hover #line_two
-    width: 30px
-
-  #hamburger:hover #line_three
-    width: 20px
-
-.line
-  animation: blink_bg 4.5s infinite
-  background-color: black
-  height: 1px
-  margin: 7px 0px 7px 0px
-  transition: all .5s
-  width: 40px
-
-#menu
-  display: none
-  background-clip: text
-  background-color: white
-  height: 0vh
-  overflow-y: hidden
-  position: absolute
-  right: 0
-  top: 0
-  transition: all .5s
-  width: 15vw
-  z-index: 3
-
-ul
-  list-style-type: none
-
-li
-  align-items: center
-  display: flex
-  font-size: 15px
-  height: 10vh
-  justify-content: center
-  text-align: center
-  text-transform: uppercase
-
-li:first-child
-  margin-top: 25vh
-
-.li_box
-  background-color: white
-  cursor: pointer
-  height: auto
-  padding: 2px
-  transition: all .15s ease-in
-  width: auto
-
-.li_box:hover
-  background-color: black
-  color: white
-
-/* projects */
-
-.projects
-  height: auto
-  overflow-x: hidden
-  padding: 5vw
-  width: 100vw
-  margin: auto
-
-.project_box
-  height: 60vh
-  margin-top: 5vw
-  overflow: hidden
-  width: 90vw
-
-.project_box:first-child
-  margin-top: 0vw
-
-.project_box_left
-  float: left
-  height: 60vh
-  width: 45vw
-
-.project_box_right
-  float: left
-  height: 60vh
-  width: 45vw
-
-/* contact */
-
-#message
-  background-color: $black-transparent
-  color: white
-  display: none
-  height: 100vh
-  left: 0
-  opacity: 0
-  position: absolute
-  text-align: center
-  top: 0
-  transition: all .5s
-  width: 100vw
-  z-index: 5
-
-  .label
-    font-size: 20px
-    line-height: 10vh
-
-  input
-    height: 50px
-    width: 400px
-
-  button
-    height: 50px
-    margin-top: 10px
-    text-transform: uppercase
-    width: 200px
-
-/* media queries */
-
-@media screen and (max-width: 900px)
-  .projects
+    height: 100vh
     width: 100vw
 
-  .black, .top_one, #nav, #menu, li
-    width: 100vw
 
-  .white
-    display: none
 
-  #nav
-    background-color: $black-transparent
-    animation: none
-    color: white
-    left: 0
-    top: 0
 
-  .line
-    animation: none
-    background-color: white
 
-  .top, .top_one, .bottom, .bottom_one, .bottom_two, #nav
-    height: 15vh
 
-  .top_two
-    width: 0vw
 
-  .middle
-    height: 70vh
+
+
+
+
+
+
+
+// $lightblue: #eef7fa
+// $lightpink: #fff6f7
+// $black-transparent: rgba(0, 0, 0, .9)
+// $white-transparent: rgba(255, 255, 255, .9)
+// $lightgrey: #f6f6f6
+// $violet: #f4f4ff
+// $pastelred: #ffeae8
+
+// .lightblue
+//   background-color: $lightblue
+
+// .lightpink
+//   background-color: $lightpink
+
+// #lightgrey
+//   background-color: $lightgrey
+
+// #violet
+//   background-color: $violet
+
+// #pastelred
+//   background-color: $pastelred
+
+// *
+//   box-sizing: border-box
+//   font-family: Montserrat
+//   font-weight: 300
+//   margin: 0
+//   overflow-x: hidden
+//   padding: 0
+//   -webkit-overflow-scrolling: touch
+//   -webkit-tap-highlight-color: rgba(0, 0, 0, 0)
+
+// *:focus
+//   outline: none
+
+// body
+//   font-size: 10px
+
+// .home
+//   animation: width .5s
+
+// button
+//   cursor: pointer
+
+// #send
+//   color: white
+//   font-size: 30px
+//   line-height: 10vh
+//   text-transform: uppercase
+
+// /* landing page / homepage */
+
+// .top, .bottom
+//   height: 22vh
+//   min-height: 5rem
+//   width: 100vw
+
+// .top_one
+//   background-color: black
+//   width: 85vw
+
+// .middle
+//   align-items: center
+//   background-color: white
+//   display: flex
+//   height: 56vh
+//   justify-content: center
+//   min-height: 20rem
+
+//   hr
+//     background-color: black
+//     border: none
+//     height: 2px
+//     margin: 15px auto 15px auto
+//     width: 50px
+
+//   p
+//     font-size: 30px
+//     font-weight: 600
+//     letter-spacing: 8px
+//     text-align: center
+//     text-transform: uppercase
+//     white-space: nowrap
+
+//   .p_down
+//     font-size: 22px
+//     letter-spacing: 5px
+
+// .bottom_one
+//   background-color: black
+//   float: left
+//   height: 22vh
+//   width: 15vw
+
+// .bottom_two
+//   background-color: $lightpink
+//   float: left
+//   height: 22vh
+//   width: 85vw
+
+// /* about me */
+
+// .about_content
+//   height: auto
+//   padding-left: 20vw
+//   padding-right: 20vw
+//   width: 100vw
+
+//   hr
+//     background-color: black
+//     border: none
+//     height: 1px
+//     margin: 15px auto 15px auto
+//     width: 50px
+
+// #about_me_header
+//   border-top: 2px solid black
+//   border-bottom: 2px solid black
+//   font-size: 30px
+//   font-weight: 400
+//   letter-spacing: 2px
+//   line-height: 22vh
+//   opacity: 0
+//   padding-right: 5rem
+//   text-align: right
+//   text-transform: uppercase
+//   transition: all .5s
+//   white-space: nowrap
+//   width: 0vw
+
+// .about_question
+//   font-size: 25px
+//   font-weight: 400
+//   padding: 20px 0px 20px 0px
+//   text-align: center
+
+// .about_me_paragraph
+//   font-size: 20px
+//   text-align: center
+
+// /* navigation */
+
+// #nav
+//   align-items: center
+//   background-color: white
+//   cursor: pointer
+//   display: flex
+//   height: 22vh
+//   justify-content: center
+//   min-height: 5rem
+//   position: fixed
+//   right: 0
+//   text-transform: uppercase
+//   top: 0
+//   width: 15vw
+//   z-index: 4
+
+//   p
+//     font-size: 15px
+//     letter-spacing: 4px
+//     padding-right: 6px
+
+//   #hamburger
+//     cursor: pointer
+//     float: right
+
+//     #line_one
+//       width: 20px
   
-  #menu
-    background-color: rgba(255, 255, 255, .95)
-
-  .project_box, .project_info, .project_link
-    width: 50vw
-
-  #about_me_header
-    font-size: 22px
-    letter-spacing: 0px
-    line-height: 15vh
-    padding-right: 4rem
-
-@media screen and (max-width: 650px)
-  .project_box, .project_info, .project_link
-    width: 100vw
-
-  .about_content
-    paddding-left: 10vw
-    padding-right: 10vw
+//     #line_two
+//       width: 40px
   
-  #about_me_header
-    font-size: 18px
-    padding-right: 0rem
-    text-align: center
+//     #line_three
+//       width: 30px
+
+//   #hamburger:hover #line_one
+//     width: 40px
+
+//   #hamburger:hover #line_two
+//     width: 30px
+
+//   #hamburger:hover #line_three
+//     width: 20px
+
+// .line
+//   background-color: black
+//   height: 1px
+//   margin: 7px 0px 7px 0px
+//   transition: all .5s
+//   width: 40px
+
+// #menu
+//   display: none
+//   background-clip: text
+//   background-color: white
+//   height: 0vh
+//   overflow-y: hidden
+//   position: absolute
+//   right: 0
+//   top: 0
+//   transition: all .5s
+//   width: 15vw
+//   z-index: 3
+
+// ul
+//   list-style-type: none
+
+// li
+//   align-items: center
+//   display: flex
+//   font-size: 15px
+//   height: 10vh
+//   justify-content: center
+//   text-align: center
+//   text-transform: uppercase
+
+// li:first-child
+//   margin-top: 25vh
+
+// .li_box
+//   background-color: white
+//   cursor: pointer
+//   height: auto
+//   padding: 2px
+//   transition: all .15s ease-in
+//   width: auto
+
+// .li_box:hover
+//   background-color: black
+//   color: white
+
+// /* projects */
+
+// .projects
+//   height: auto
+//   overflow-x: hidden
+//   padding: 5vw
+//   width: 100vw
+//   margin: auto
+
+// .project_box
+//   height: 60vh
+//   margin-top: 5vw
+//   overflow: hidden
+//   width: 90vw
+
+// .project_box:first-child
+//   margin-top: 0vw
+
+// .project_box_left
+//   float: left
+//   height: 60vh
+//   width: 45vw
+
+// .project_box_right
+//   background-color: black
+//   float: left
+//   height: 60vh
+//   width: 45vw
+
+// .project_link
+//   background-color: white
+//   cursor: pointer
+//   font-size: 16px
+//   letter-spacing: 4px
+//   line-height: 60vh
+//   opacity: 0
+//   text-align: center
+//   text-transform: uppercase
+//   transition: opacity .5s
+
+// .project_link:hover
+//   opacity: 1
+
+// /* contact */
+
+// #message
+//   background-color: $black-transparent
+//   color: white
+//   display: none
+//   height: 100vh
+//   left: 0
+//   opacity: 0
+//   position: absolute
+//   text-align: center
+//   top: 0
+//   transition: all .5s
+//   width: 100vw
+//   z-index: 5
+
+//   .label
+//     font-size: 20px
+//     line-height: 10vh
+
+//   input
+//     height: 50px
+//     width: 400px
+
+//   button
+//     height: 50px
+//     margin-top: 10px
+//     text-transform: uppercase
+//     width: 200px
+
+// /* media queries */
+
+// @media screen and (max-width: 900px)
+//   .projects
+//     width: 100vw
+
+//   .black, .top_one, #nav, #menu, li
+//     width: 100vw
+
+//   .white
+//     display: none
+
+//   #nav
+//     background-color: $black-transparent
+//     animation: none
+//     color: white
+//     left: 0
+//     top: 0
+
+//   .line
+//     animation: none
+//     background-color: white
+
+//   .top, .top_one, .bottom, .bottom_one, .bottom_two, #nav
+//     height: 15vh
+
+//   .top_two
+//     width: 0vw
+
+//   .middle
+//     height: 70vh
   
-  .about_me_question
-    font-size: 15px
+//   #menu
+//     background-color: rgba(255, 255, 255, .95)
 
-  .about_me_paragraph
-    font-size: 15px
+//   .project_box, .project_info, .project_link
+//     width: 50vw
 
-/* keyframes */
+//   #about_me_header
+//     font-size: 22px
+//     letter-spacing: 0px
+//     line-height: 15vh
+//     padding-right: 4rem
 
-@keyframes width
-  0%
-    width: 0%
+// @media screen and (max-width: 650px)
+//   .project_box, .project_info, .project_link
+//     width: 100vw
 
-  100%
-    width: 100%
-
-@keyframes blink
-  0%
-    color: black
-
-  30%
-    color: black
-
-  50%
-    color: $lightblue
-
-  70%
-    color: black
+//   .about_content
+//     paddding-left: 10vw
+//     padding-right: 10vw
   
-  100%
-    color: black
-
-@keyframes blink_bg
-  0%
-    background-color: black
-
-  30%
-    background-color: black
-
-  50%
-    background-color: $lightpink
-
-  70%
-    background-color: black
-
-  100%
-    background-color: black
-
-/* CV */
-
-.cv_wrapper
-  background-color: white
-  border-right: 2px solid black
-  height: 100vh
-  text-align: center
-  width: 85vw
-
-  p
-    font-size: 20px
-
-  .job_name
-    font-weight: 400
-
-  .job_date
-    font-size: 15px
-    letter-spacing: 2px
-    text-transform: uppercase
+//   #about_me_header
+//     font-size: 18px
+//     padding-right: 0rem
+//     text-align: center
   
-  .job_task
-    font-size: 15px
+//   .about_me_question
+//     font-size: 15px
+
+//   .about_me_paragraph
+//     font-size: 15px
+
+// /* keyframes */
+
+// @keyframes width
+//   0%
+//     width: 0%
+
+//   100%
+//     width: 100%
+
+// /* CV */
+
+// .cv_wrapper
+//   background-color: white
+//   border-right: 2px solid black
+//   height: 100vh
+//   text-align: center
+//   width: 85vw
+
+//   p
+//     font-size: 20px
+
+//   .job_name
+//     font-weight: 400
+
+//   .job_date
+//     font-size: 15px
+//     letter-spacing: 2px
+//     text-transform: uppercase
+  
+//   .job_task
+//     font-size: 15px
     
-  h1
-    font-size: 30px
-    line-height: 4rem
+//   h1
+//     font-size: 30px
+//     line-height: 4rem
 
-  hr
-    background-color: black
-    border: none
-    height: 2px
-    margin: 20px auto 20px auto
-    width: 50px
+//   hr
+//     background-color: black
+//     border: none
+//     height: 2px
+//     margin: 20px auto 20px auto
+//     width: 50px
 
-  .cv_wrapper_top
-    background-color: black
-    color: white
-    height: 6rem
-    padding-left: 2rem
-    width: 85vw
+//   .cv_wrapper_top
+//     background-color: black
+//     color: white
+//     height: 6rem
+//     padding-left: 2rem
+//     width: 85vw
 
-    p
-      font-size: 15px
-      text-transform: uppercase
+//     p
+//       font-size: 15px
+//       text-transform: uppercase
 
-  h2
-    font-size: 25px
-    font-weight: bold
-    padding: 20px 0px 20px 0px
+//   h2
+//     font-size: 25px
+//     font-weight: bold
+//     padding: 20px 0px 20px 0px
 
-  .language_box
-    align-items: center
-    display: flex
-    height: auto
-    justify-content: center
-    margin: 10px auto 10px auto
-    width: auto
+//   .language_box
+//     align-items: center
+//     display: flex
+//     height: auto
+//     justify-content: center
+//     margin: 10px auto 10px auto
+//     width: auto
 
-    p
-      font-size: 20px
+//     p
+//       font-size: 20px
 
-  .bar
-    border: 1px solid black
-    height: 20px
-    margin: auto
-    width: 200px
+//   .bar
+//     border: 1px solid black
+//     height: 20px
+//     margin: auto
+//     width: 200px
 
-  #bar_1, #bar_2, #bar_3, #bar_4, #bar_5, #bar_6, #bar_7, #bar_8
-    background-color: green
-    height: 18px
-    transition: all .75s
-    width: 0px
+//   #bar_1, #bar_2, #bar_3, #bar_4, #bar_5, #bar_6, #bar_7, #bar_8
+//     background-color: green
+//     height: 18px
+//     transition: all .75s
+//     width: 0px

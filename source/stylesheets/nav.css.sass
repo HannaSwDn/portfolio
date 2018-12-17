@@ -1,0 +1,55 @@
+#nav
+    background: linear-gradient(to bottom, black 50%, white 50%, white 92%, black 92%)
+    height: 100vh
+    left: 0
+    position: absolute
+    top: 0
+    width: 65px
+
+    .nav_icon
+        cursor: pointer
+        height: 120px
+        width: 65px
+
+    .nav_icon:hover .line
+        // add code when hover
+
+    .line
+        background-color: white
+        height: 2px
+        margin: auto
+        margin-top: 10px
+        transition: all .5s
+        width: 30px
+
+    .line:first-child
+        cursor: pointer
+        margin-top: 50px
+
+    // list items
+#menu
+    background: linear-gradient(to right bottom, rgba(255, 255, 255, .9), rgba(255, 247, 248, .9))
+    display: none
+    height: 0vh
+    overflow-y: hidden
+    position: absolute
+    right: 0
+    top: 0
+    transition: height .5s
+    width: calc(100vw - 75px)
+
+    ul
+        list-style-type: none
+
+    li
+        align-items: center
+        display: flex
+        height: 20vh
+        justify-content: center
+        text-align: center
+    
+    .li_box p
+        cursor: pointer
+        font-size: 18px
+        letter-spacing: 5px
+        text-transform: uppercase

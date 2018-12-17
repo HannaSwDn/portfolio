@@ -18,9 +18,11 @@ title: Projects
     - data.projects.each do |project|
         - if project[:id] % 2 == 0
             .project_box
-                .project_box_left.lightpink
+                .project_box_left
+                    %p.project_link= project[:name]
                 .project_box_right
         - elsif project[:id] % 2 != 0
             .project_box
                 .project_box_right
-                .project_box_left.lightblue
+                .project_box_left
+                    %p.project_link= project[:name]
