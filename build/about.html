@@ -11,38 +11,39 @@
 </html>
 <body>
 <div id='nav'>
-<p>menu</p>
-<div id='hamburger'>
-<div class='line' id='line_one'></div>
-<div class='line' id='line_two'></div>
-<div class='line' id='line_three'></div>
+<div class='nav_icon'>
+<div class='line'></div>
+<div class='line'></div>
+</div>
+<div class='nav_text'>
+<p>portfolio</p>
 </div>
 </div>
 <div id='menu'>
 <ul>
 <li id='li-one'>
 <div class='li_box'>
-<p class='item'>home</p>
+<p>— home</p>
 </div>
 </li>
 <li id='li-two'>
 <div class='li_box'>
-<p class='item'>about me</p>
+<p>— about me</p>
 </div>
 </li>
 <li id='li-three'>
 <div class='li_box'>
-<p class='item'>projects</p>
+<p>— projects</p>
 </div>
 </li>
 <li id='li-four'>
 <div class='li_box'>
-<p class='item'>contact</p>
+<p>— contact</p>
 </div>
 </li>
 <li id='li-five'>
 <div class='li_box'>
-<p class='item'>exit menu</p>
+<p>— exit menu</p>
 </div>
 </li>
 </ul>
@@ -50,13 +51,45 @@
 
 <div class='home'>
 <div class='top top_one'>
-<p>contact me</p>
 <div class='top_two'></div>
 </div>
-<div class='middle'></div>
+<div class='middle'>
+<div class='middle_text_box'>
+<p>about me</p>
+<hr>
+<p class='p_down'>scroll down</p>
+</div>
+</div>
 <div class='bottom'>
 <div class='bottom_one'></div>
-<div class='bottom_two'></div>
+<div class='bottom_two' id='violet'></div>
+</div>
+</div>
+<div id='about_me_header'>- Student at Craft Academy</div>
+<div class='about_content'>
+<p class='about_question'>How did I end up at a programming bootcamp?</p>
+<p class='about_me_paragraph'>In august I enrolled in a programming bootcamp in Stockholm called Craft Academy. I have been interested in programming since one of my friends introduced me to it in spring 2018.</p>
+<hr>
+<p class='about_me_paragraph'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi, molestias rem necessitatibus velit doloremque non quae, cumque deserunt tempora inventore architecto, voluptatum nemo facere magnam vel quis officiis perspiciatis saepe. Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero aut, iste impedit optio eveniet magnam iure culpa consectetur neque doloremque est vel voluptas dolor, non sit maiores sunt tenetur ratione!</p>
+<hr>
+<p class='about_me_paragraph'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit, eaque quas eum sapiente magni architecto tenetur voluptatem aliquid officiis dolores, provident ducimus saepe iure molestias dolor et repellat reiciendis minus!</p>
+</div>
+
+<div id='message'>
+<p id='send'>send me a message!</p>
+<div class='contact-form' id='contact_form'>
+<div class='form open-form' id='form'>
+<form name='contact form' netlify='#'>
+<p class='label'>Your Message</p>
+<input columns='15' name='message' placeholder='Your Message Here' rows='3' type='textarea'>
+<p class='label'>Your Email</p>
+<input autocomplete='on' name='email' placeholder='Your Email Here' type='email'>
+<p class='buttons'>
+<button id='submit-form-button' type='submit'>Submit</button>
+<button>Close</button>
+</p>
+</form>
+</div>
 </div>
 </div>
 

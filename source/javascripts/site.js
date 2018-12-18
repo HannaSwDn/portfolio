@@ -1,9 +1,8 @@
 // declaring DOM variables
-let menu_btn, menu, li_one, li_two, li_three, li_four, li_five, nav, div_form
+let menu, li_one, li_two, li_three, li_four, li_five, nav
 
 // setting DOM variables and event listeners when the browser has been loaded
 window.onload = function() {
-    div_form = document.querySelector('#message')
     nav = document.querySelector('#nav')
     menu = document.querySelector('#menu')
     li_one = document.querySelector('#li-one')
@@ -45,24 +44,15 @@ window.onload = function() {
         let offset = window.pageYOffset
         menu.style.top = offset + 'px'
         nav.style.top = offset + 'px'
-        div_form.style.top = offset + 'px'
-
-        if (offset + 500 >= about_header.offsetTop) {
-            about_header.style.width = '100vw'
-            about_header.style.opacity = '1'
-        } else {
-            about_header.style.width = '0vw'
-            about_header.style.opacity = '0'
-        }
     })
 }
 
 const openMenu = () => {
     menu.style.display = 'block'
-    setTimeout(function(){ menu.style.height = '100vh' }, 100);
+    setTimeout(function(){ menu.style.width = 'calc(100vw - 75px)' }, 100);
 }
 
 const closeMenu = () => {
-    menu.style.height = '0vh'
+    menu.style.width = '0vw'
     setTimeout(function(){ menu.style.display = 'none' }, 520);
 }

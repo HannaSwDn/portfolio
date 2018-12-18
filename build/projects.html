@@ -11,20 +11,41 @@
 </html>
 <body>
 <div id='nav'>
-<p>menu</p>
-<div id='hamburger'>
-<div class='line' id='line_one'></div>
-<div class='line' id='line_two'></div>
-<div class='line' id='line_three'></div>
+<div class='nav_icon'>
+<div class='line'></div>
+<div class='line'></div>
+</div>
+<div class='nav_text'>
+<p>portfolio</p>
 </div>
 </div>
 <div id='menu'>
 <ul>
-<li id='li-one'>- home</li>
-<li id='li-two'>- about me</li>
-<li id='li-three'>- projects</li>
-<li id='li-four'>- contact</li>
-<li id='li-five'>- exit menu</li>
+<li id='li-one'>
+<div class='li_box'>
+<p>— home</p>
+</div>
+</li>
+<li id='li-two'>
+<div class='li_box'>
+<p>— about me</p>
+</div>
+</li>
+<li id='li-three'>
+<div class='li_box'>
+<p>— projects</p>
+</div>
+</li>
+<li id='li-four'>
+<div class='li_box'>
+<p>— contact</p>
+</div>
+</li>
+<li id='li-five'>
+<div class='li_box'>
+<p>— exit menu</p>
+</div>
+</li>
 </ul>
 </div>
 
@@ -33,50 +54,70 @@
 <div class='top_two'></div>
 </div>
 <div class='middle'>
-<p id='projects_header'>projects</p>
+<div class='middle_text_box'>
+<p>projects</p>
 <hr>
+<p class='p_down'>scroll down</p>
+</div>
 </div>
 <div class='bottom'>
 <div class='bottom_one'></div>
-<div class='bottom_two'></div>
+<div class='bottom_two' id='pastelred'></div>
 </div>
 </div>
-<!-- / = partial 'partials/projects' -->
 <div class='projects'>
 <div class='project_box'>
-<p class='project_header lightblue right'>Number Memory Test</p>
-<div class='project_box_white'>
-<p class='project_description'>This is a test I made so the user can test their short-term memory</p>
-</div>
-<div class='project_box_black'>
-<button>no link yet</button>
+<div class='project_box_right'></div>
+<div class='project_box_left'>
+<p class='project_link'>Number Memory Test</p>
 </div>
 </div>
 <div class='project_box'>
-<p class='project_header lightpink left'>FizzBuzz</p>
-<div class='project_box_black'>
-<button>no link yet</button>
+<div class='project_box_left'>
+<p class='project_link'>FizzBuzz</p>
 </div>
-<div class='project_box_white'>
-<p class='project_description'>My first Test driven ruby project</p>
+<div class='project_box_right'></div>
+</div>
+<div class='project_box'>
+<div class='project_box_right'></div>
+<div class='project_box_left'>
+<p class='project_link'>Password Generator</p>
 </div>
 </div>
 <div class='project_box'>
-<p class='project_header lightblue right'>Club Sandwich</p>
-<div class='project_box_white'>
-<p class='project_description'>A sandwich shop website I made to practice CSS</p>
+<div class='project_box_left'>
+<p class='project_link'>Fast Typing Test</p>
 </div>
-<div class='project_box_black'>
-<button>no link yet</button>
+<div class='project_box_right'></div>
+</div>
+<div class='project_box'>
+<div class='project_box_right'></div>
+<div class='project_box_left'>
+<p class='project_link'>Library Challenge</p>
 </div>
 </div>
 <div class='project_box'>
-<p class='project_header lightpink left'>Upcoming</p>
-<div class='project_box_black'>
-<button>upcoming</button>
+<div class='project_box_left'>
+<p class='project_link'>Rock Paper Scissors</p>
 </div>
-<div class='project_box_white'>
-<p class='project_description'>upcoming</p>
+<div class='project_box_right'></div>
+</div>
+</div>
+
+<div id='message'>
+<p id='send'>send me a message!</p>
+<div class='contact-form' id='contact_form'>
+<div class='form open-form' id='form'>
+<form name='contact form' netlify='#'>
+<p class='label'>Your Message</p>
+<input columns='15' name='message' placeholder='Your Message Here' rows='3' type='textarea'>
+<p class='label'>Your Email</p>
+<input autocomplete='on' name='email' placeholder='Your Email Here' type='email'>
+<p class='buttons'>
+<button id='submit-form-button' type='submit'>Submit</button>
+<button>Close</button>
+</p>
+</form>
 </div>
 </div>
 </div>

@@ -1,12 +1,9 @@
 // declaring DOM variables
-let menu_btn, menu, li_one, li_two, li_three, li_four, nav, arrows, about_me, form, btn_message
+let menu_btn, menu, li_one, li_two, li_three, li_four, li_five, nav, div_form
 
 // setting DOM variables and event listeners when the browser has been loaded
 window.onload = function() {
-    btn_message = document.querySelector('#btn_message')
     div_form = document.querySelector('#message')
-    about_me = document.querySelector('#about_me')
-    arrows = document.querySelectorAll('.arrow')
     nav = document.querySelector('#nav')
     menu = document.querySelector('#menu')
     li_one = document.querySelector('#li-one')
@@ -21,22 +18,23 @@ window.onload = function() {
 
     li_one.addEventListener('click', event => {
         closeMenu()
-        setTimeout(function() { window.open('index.html', '_self'); }, 320);
+        setTimeout(function() { window.open('index.html', '_self') }, 520);
     })
 
     li_two.addEventListener('click', event => {
         closeMenu()
-        setTimeout(function() { window.open('about.html', '_self'); }, 320);
+        setTimeout(function() { window.open('about.html', '_self') }, 520);
     })
 
     li_three.addEventListener('click', event => {
         closeMenu()
-        setTimeout(function() { window.open('projects.html', '_self'); }, 320);
+        setTimeout(function() { window.open('projects.html', '_self') }, 520);
     })
 
     li_four.addEventListener('click', event => {
         closeMenu()
-        setTimeout(function() { window.open('contact.html', '_self'); }, 320);
+        div_form.style.display = 'block'
+        setTimeout(function() { div_form.style.opacity = '1' }, 20);
     })
 
     li_five.addEventListener('click', event => {
@@ -46,20 +44,25 @@ window.onload = function() {
     document.addEventListener('scroll', event => {
         let offset = window.pageYOffset
         menu.style.top = offset + 'px'
-    })
+        nav.style.top = offset + 'px'
+        div_form.style.top = offset + 'px'
 
-    btn_message.addEventListener('click', event => {
-        div_form.style.display = 'block'
-        setTimeout(function(){ div_form.style.opacity = '1' }, 20);
+        if (offset + 500 >= about_header.offsetTop) {
+            about_header.style.width = '100vw'
+            about_header.style.opacity = '1'
+        } else {
+            about_header.style.width = '0vw'
+            about_header.style.opacity = '0'
+        }
     })
 }
 
 const openMenu = () => {
     menu.style.display = 'block'
-    setTimeout(function(){ menu.style.height = '100vh' }, 10);
+    setTimeout(function(){ menu.style.height = '100vh' }, 100);
 }
 
 const closeMenu = () => {
     menu.style.height = '0vh'
-    setTimeout(function(){ menu.style.display = 'none' }, 300);
+    setTimeout(function(){ menu.style.display = 'none' }, 520);
 }
