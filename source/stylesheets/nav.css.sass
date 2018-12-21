@@ -1,5 +1,5 @@
 #nav
-    background: linear-gradient(to bottom, black 50%, #fffbf4 50%)
+    background: linear-gradient(to bottom, black 50%, #fbfbff 50%)
     height: 100vh
     left: 0
     position: absolute
@@ -51,12 +51,13 @@
 
 // list items
 #menu
-    background: linear-gradient(to bottom, black 50%, #fffbf4 50%)
+    background-color: rgba(255, 255, 255, .9)
     display: none
     height: 100vh
     overflow-y: hidden
     position: absolute
-    right: 0
+    left: 0
+    margin-left: 65px
     top: 0
     transition: all .5s
     width: 0vw
@@ -67,16 +68,16 @@
     li
         align-items: center
         display: flex
-        height: 10vh
+        height: 20vh
         justify-content: center
         text-align: center
     
         .li_box p
-            color: white
             cursor: pointer
             font-size: 16px
             letter-spacing: 8px
             text-transform: uppercase
+            white-space: nowrap
 
 @keyframes line_width
     0%
