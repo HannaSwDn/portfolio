@@ -2,18 +2,6 @@
 title: Projects
 ---
 
-.home
-    .top.top_one
-        .top_two
-    .middle
-        .middle_text_box
-            %p projects
-            %hr
-            %p.p_down scroll down
-    .bottom
-        .bottom_one
-        .bottom_two#pastelred
-
 .projects
     - data.projects.each do |project|
         - if project[:id] % 2 == 0
