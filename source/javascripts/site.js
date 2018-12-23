@@ -1,5 +1,5 @@
 // declaring DOM variables
-let menu, li_one, li_two, li_three, li_four, li_five, nav
+let menu, li_one, li_two, li_three, li_four, nav
 
 // setting DOM variables and event listeners when the browser has been loaded
 window.onload = function() {
@@ -9,7 +9,6 @@ window.onload = function() {
     li_two = document.querySelector('#li-two')
     li_three = document.querySelector('#li-three')
     li_four = document.querySelector('#li-four')
-    li_five = document.querySelector('#li-five')
 
     nav.addEventListener('click', event => {
         openMenu()
@@ -31,12 +30,6 @@ window.onload = function() {
     })
 
     li_four.addEventListener('click', event => {
-        closeMenu()
-        div_form.style.display = 'block'
-        setTimeout(function() { div_form.style.opacity = '1' }, 20);
-    })
-
-    li_five.addEventListener('click', event => {
         closeMenu()
     })
 

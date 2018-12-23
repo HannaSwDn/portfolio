@@ -5,12 +5,6 @@ title: Projects
 .projects
     - data.projects.each do |project|
         - if project[:id] % 2 == 0
-            .project_box
-                .project_box_left
-                    %p.project_link= project[:name]
-                .project_box_right
+            %p.project_link= project[:name]
         - elsif project[:id] % 2 != 0
-            .project_box
-                .project_box_right
-                .project_box_left
-                    %p.project_link= project[:name]
+            %p.project_link= project[:name]

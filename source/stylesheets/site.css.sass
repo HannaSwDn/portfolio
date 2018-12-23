@@ -1,6 +1,7 @@
 // stylesheet for navbar
 @import 'nav.css.sass'
 @import 'scrollbar.css.sass'
+@import 'contact.css.sass'
 
 // fonts
 @import url('https://fonts.googleapis.com/css?family=Montserrat:300,400,600')
@@ -28,11 +29,41 @@
         width: calc((100vw - 75px) / 2)
 
     .left
+        align-items: center
+        display: flex
+        justify-content: center
         margin-left: 65px
+        text-align: center
+        text-transform: uppercase
+
+        .left_text p
+            font-size: 20px
+            letter-spacing: 2px
+            padding: 10px 0px 10px 0px
 
     .right
         background-color: #fbfbff
 
+        .right_box
+            align-items: center
+            display: flex
+            height: 50vh
+            justify-content: center
+            width: calc((100vw - 75px) / 2)
+
+            button
+                border: 1px solid black
+                cursor: pointer
+                padding: 15px 50px 15px 50px
+                text-transform: uppercase
+
+        .right_box:last-child
+            background-color: black
+
+            button
+                background-color: black
+                border: 1px solid white
+                color: white
 
 
 
