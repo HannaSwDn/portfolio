@@ -24,6 +24,9 @@ describe 'Index Page', type: :feature do
     
             within '#menu' do
                 expect(page).to have_content 'home'
+                expect(page).to have_content 'projects'
+                expect(page).to have_content 'about me'
+                expect(page).to have_content 'contact'
             end
         end
     end
