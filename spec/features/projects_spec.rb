@@ -17,12 +17,4 @@ describe 'Projects Page', type: :feature do
             expect(page).to have_content 'Upcoming'
         end
     end
-
-    it 'has a button to navigate to the project' do
-        visit 'projects.html'
-
-        within '.projects' do
-            expect(page).to have_content 'go to project'
-        end
-    end
 end
