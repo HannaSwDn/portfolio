@@ -14,7 +14,7 @@ describe 'Projects Page', type: :feature do
             expect(page).to have_content 'FizzBuzz'
             expect(page).to have_content 'Number Memory Test'
             expect(page).to have_content 'Library Challenge'
-            expect(page).to have_content 'Upcoming'
+            expect(page).to have_content 'care2share'
         end
     end
 end
